@@ -1,5 +1,5 @@
 title        = "CSE 130"
-#baseurl      = "https://cse130.programming.systems"
+baseurl      = "https://cse130.programming.systems"
 languageCode = "en-us"
 contentdir   = "content"
 layoutdir    = "layouts"

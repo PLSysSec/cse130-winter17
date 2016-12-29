@@ -24,13 +24,13 @@ matters, please post a private question or contact the course staff by email.
 
 - **Name:** Mario M. Alvarez
 - **Office hours:** TBA in TBA
-
+<hr/>
 - **Name:** Atyansh Jaiswal (AJ)
 - **Office hours:** TBA in TBA
-
+<hr/>
 - **Name:** Abdulrahman M. Alkhelaifi (Abdul)
 - **Office hours:** TBA in TBA
-
+<hr/>
 - **Name:** Jiashen Wang
 - **Office hours:** TBA in TBA
 

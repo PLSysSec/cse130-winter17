@@ -14,10 +14,11 @@ few special-topics in programming languages. The class also has a number of
 small labs where students get to implement some of the language features
 discussed in class.
 
-#### Lecture
-
-* **Location:** Ledden Auditorium
-* **Time:** Mondays and Wednesdays 6:30-7:50PM
+* **Section ID:** 895741
+* **Lectures:** Mondays and Wednesdays, 6:30-7:50PM in Ledden Auditorium
+* **Section:** Fridays, 8:00-8:50AM in WLH 2005
+* **Staff email:** <ucsd-cse130-winter17@googlegroups.com>
+* **Piazza:** <https://piazza.com/ucsd/winter2017/cse130>
 
 #### Textbook
 
@@ -26,28 +27,21 @@ discussed in class.
 * **Publisher:** Cambridge University Press
 * **ISBN13:** 9780521780988
 
-#### Instructor
+#### Course Staff
 
-- **Name:** [Deian Stefan](https://cseweb.ucsd.edu/~dstefan/)
-- **Email:** <deian+cse130@cs.ucsd.edu>
-- **Address:** CSE 3126 
-- **Office hours:** Tuesday 1:30-2:30PM or by appointment
+- [Deian Stefan](https://cseweb.ucsd.edu/~dstefan/) (Instructor)
+- Mario Alvarez (TA)
+- Atyansh Jaiswal (TA)
+- Abdul Alkhelaifi (TA)
+- Jiashen Wang (TA)
+- Matt Chan (tutor)
 
-##### Teaching Assistants
+#### Acknowledgements
 
-- **Name:** Mario M. Alvarez
-- **Office hours:** TBA in TBA
-
-- **Name:** Atyansh Jaiswal (AJ)
-- **Office hours:** TBA in TBA
-
-- **Name:** Abdulrahman M. Alkhelaifi (Abdul)
-- **Office hours:** TBA in TBA
-
-- **Name:** Jiashen Wang
-- **Office hours:** TBA in TBA
-
-##### Tutors
-
-- **Name:** Matthew Chee Long Chan (Matt)
-- **Office hours:** TBA in TBA
+This course is based on material from Stanford's and UCSD's programming languages courses.
+Thanks to these fantastic instructors for all their hard work:
+<a href="http://www.cs.tufts.edu/~kfisher/">Kathleen Fisher</a>,
+<a href="http://ranjitjhala.github.io/">Ranjit Jhala</a>,
+<a href="http://cseweb.ucsd.edu/~lerner/">Sorin Lerner</a>,
+<a href="http://theory.stanford.edu/people/jcm/">John C. Mitchell</a>, and
+<a href="http://ezyang.com/">Edward Z. Yang</a>.
