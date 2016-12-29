@@ -5,7 +5,7 @@ contentdir   = "content"
 layoutdir    = "layouts"
 publishdir   = "public"
 staticdir    = "static"
-#canonifyurls = true
+canonifyurls = true
 theme        = "hyde-y"
 
 [author]
