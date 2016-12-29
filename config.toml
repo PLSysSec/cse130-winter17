@@ -1,0 +1,26 @@
+title        = "CSE 130"
+#baseurl      = "https://cse130.programming.systems"
+languageCode = "en-us"
+contentdir   = "content"
+layoutdir    = "layouts"
+publishdir   = "public"
+staticdir    = "static"
+#canonifyurls = true
+theme        = "hyde-y"
+
+[author]
+  name  = "Deian Stefan"
+  email = "deian+cse130@cs.ucsd.edu"
+
+[params]
+    topline = "Programming Languages: Principles and Paradigms "
+
+    # Sidebar position
+    # false, true, "left", "right"
+    sidebar = "left"
+
+    # Select a syntax highight.
+    # Check the static/css/highlight directory for options.
+    highlight = "default"
+    twitter   = "deiandelmars"
+    github    = "plsyssec/cse130-winter17"
