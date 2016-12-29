@@ -19,14 +19,15 @@
       <guid>https://cse130.programming.systems/about/</guid>
       <description>
 
-&lt;p&gt;The course consists of lectures, written homeworks and programming assignments.
-The goal of the course is to (1) familiarize you with different, modern
-programming language concepts and paradigms and (2) get you to think about and
-understand the design trade-offs and implementations of different  language
-features. We will use real-world languages (e.g., JavaScript, Haskell, and C++)
-to explore the different concepts. But, we will not cover any one language in
-full &amp;ndash; this course is not meant to make you a proficient programmer, learning
-how to proficiently program in any of these languages is a course in of itself.&lt;/p&gt;
+&lt;p&gt;The course consists of lectures, written homeworks, and programming
+assignments.  The goal of the course is to &lt;strong&gt;(1)&lt;/strong&gt; familiarize you with various
+modern programming language concepts and paradigms and &lt;strong&gt;(2)&lt;/strong&gt; get you to think
+about and understand the design trade-offs and implementations of different
+language features. We will use real-world languages (e.g., JavaScript, Haskell,
+and C++) to explore the different concepts. But, we will not cover any one
+language in full &amp;ndash; this course is not meant to make you a proficient
+programmer, learning how to proficiently program in any of these languages is a
+course in of itself.&lt;/p&gt;
 
 &lt;h4 id=&#34;grading&#34;&gt;Grading&lt;/h4&gt;
 
@@ -37,7 +38,7 @@ how to proficiently program in any of these languages is a course in of itself.&
 &lt;li&gt;35% Final exam&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&#34;participation-pre-lecture-readings&#34;&gt;Participation/pre-lecture readings&lt;/h5&gt;
+&lt;h6 id=&#34;participation-pre-lecture-readings&#34;&gt;Participation/pre-lecture readings&lt;/h6&gt;
 
 &lt;p&gt;Before each class there will be some assigned reading. You are expected to do
 the reading and have at least a vague understanding of the concepts that will
@@ -45,33 +46,23 @@ be discussed in class. This will allow us to spend the lecture time to solidify
 your understanding.  Asking and answering questions in class, on Piazza, or
 during office hours counts towards your class participation.&lt;/p&gt;
 
-&lt;h5 id=&#34;homework-and-programming-assignments&#34;&gt;Homework and programming assignments&lt;/h5&gt;
+&lt;h6 id=&#34;homework-and-programming-assignments&#34;&gt;Homework and programming assignments&lt;/h6&gt;
 
 &lt;p&gt;We will have weekly assignments, either in the form of written homeworks or
 programming assignments. These assignments are meant to both reinforce your
 knowledge of the concepts covered in lecture and get you to think beyond
 lecture (e.g., if you were tasked with designing a new language).&lt;/p&gt;
 
-&lt;h5 id=&#34;midterm-exam&#34;&gt;Midterm exam&lt;/h5&gt;
+&lt;h6 id=&#34;midterm-exam&#34;&gt;Midterm exam&lt;/h6&gt;
 
 &lt;p&gt;The exam will be held sometime in the middle of the quarter, in class. The
-midterm is &lt;strong&gt;closed-book&lt;/strong&gt;*, but you may use a double-sided cheat sheet
+midterm is &lt;strong&gt;closed-book&lt;/strong&gt;, but you may use a double-sided cheat sheet
 (letter-size).&lt;/p&gt;
 
-&lt;h5 id=&#34;final-exam&#34;&gt;Final exam&lt;/h5&gt;
+&lt;h6 id=&#34;final-exam&#34;&gt;Final exam&lt;/h6&gt;
 
 &lt;p&gt;The exam will be held on &lt;strong&gt;TBD&lt;/strong&gt; in &lt;strong&gt;TBD&lt;/strong&gt;. You &lt;strong&gt;must&lt;/strong&gt; take the exam at this
 time and location.  The final is &lt;strong&gt;open-book&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h4 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h4&gt;
-
-&lt;p&gt;This course is based on material from Stanford&amp;rsquo;s and UCSD&amp;rsquo;s programming languages courses.
-Thanks to these fantastic instructors for all their hard work:
-&lt;a href=&#34;http://www.cs.tufts.edu/~kfisher/&#34;&gt;Kathleen Fisher&lt;/a&gt;,
-&lt;a href=&#34;http://ranjitjhala.github.io/&#34;&gt;Ranjit Jhala&lt;/a&gt;,
-&lt;a href=&#34;http://cseweb.ucsd.edu/~lerner/&#34;&gt;Sorin Lerner&lt;/a&gt;,
-&lt;a href=&#34;http://theory.stanford.edu/people/jcm/&#34;&gt;John C. Mitchell&lt;/a&gt;, and
-&lt;a href=&#34;http://ezyang.com/&#34;&gt;Edward Z. Yang&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -87,265 +78,73 @@ Thanks to these fantastic instructors for all their hard work:
   &lt;thead&gt;
   &lt;tr&gt;
     &lt;th&gt;Date&lt;/th&gt;
-    &lt;th&gt;Topic&lt;/th&gt;
-    &lt;th&gt;Lead&lt;/th&gt;
+    &lt;th&gt;Topic and readings&lt;/th&gt;
   &lt;/tr&gt;
   &lt;/thead&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Sept 22&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Overview and introduction&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/confused-deputy.pdf&#34;&gt;Confused deputy&lt;/a&gt;
-      [
-      &lt;a href=&#34;https://cse130.programming.systems/slides/lecture1.pdf&#34;&gt;slides&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/notes/confused-deputy/&#34;&gt;notes&lt;/a&gt;
-      ]
-    &lt;/td&gt;
-    &lt;td&gt;
-      Deian
-    &lt;/td&gt;
+  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 09&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;A sample of language-based techniques&lt;/td&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 11&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Sept 27&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Contracts and object capabilities&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/shill.pdf&#34;&gt;Shill&lt;/a&gt;
-      [
-      &lt;a href=&#34;https://cse130.programming.systems/assignments/shill/&#34;&gt;questions&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/notes/shill/&#34;&gt;notes&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/papers/shill-annotated.pdf&#34;&gt;annotated&lt;/a&gt;
-      ]
-    &lt;/td&gt;
-    &lt;td&gt;Deian&lt;/td&gt;
+  &lt;tr class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 16&lt;/th&gt;
+    &lt;td&gt; &lt;a href=&#34;https://en.wikipedia.org/wiki/Martin_Luther_King_Jr.&#34;&gt;MLK&lt;/a&gt;- no class&lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Sept 29&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Type systems for information flow control&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/jif.pdf&#34;&gt;JIF&lt;/a&gt;
-      [
-      &lt;a href=&#34;https://cse130.programming.systems/assignments/jif/&#34;&gt;questions&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/notes/jif/&#34;&gt;notes&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/papers/jif-annotated.pdf&#34;&gt;annotated&lt;/a&gt;
-      ]
-    &lt;/td&gt;
-    &lt;td&gt;
-      Sunjay
-    &lt;/td&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 18&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Oct 04&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Runtime monitors for information flow control&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/lio.pdf&#34;&gt;LIO&lt;/a&gt;
-      [
-      &lt;a href=&#34;https://cse130.programming.systems/assignments/lio/&#34;&gt;questions&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/papers/lio-annotated.pdf&#34;&gt;annotated&lt;/a&gt;
-      ]
-    &lt;/td&gt;
-    &lt;td&gt;Deian&lt;/td&gt;
+  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 23&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Oct 06&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Structural Operational Semantics&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/lio-sequential.pdf&#34;&gt;Sequential LIO&lt;/a&gt;
-      [&lt;a href=&#34;https://www.cs.umd.edu/~dvanhorn/slides/plmw-2016.pdf&#34;&gt;excellent supplemental material&lt;/a&gt;]
-    &lt;/td&gt;
-    &lt;td&gt;Deian&lt;/td&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 25&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Server-side web security&lt;/td&gt;
+  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 30&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Oct 11&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Taint tracking and data flow assertions&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/resin.pdf&#34;&gt;Resin&lt;/a&gt;
-      [
-      &lt;a href=&#34;https://cse130.programming.systems/assignments/resin/&#34;&gt;questions&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/notes/resin/&#34;&gt;notes&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/papers/resin-annotated.pdf&#34;&gt;annotated&lt;/a&gt;
-      ]
-    &lt;/td&gt;
-    &lt;td&gt;Caroline&lt;/td&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 01&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Oct 13&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Information flow control and policy specification&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/hails.pdf&#34;&gt;Hails&lt;/a&gt;
-      [
-      &lt;a href=&#34;https://cse130.programming.systems/assignments/hails/&#34;&gt;questions&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/notes/hails/&#34;&gt;notes&lt;/a&gt;
-      ]
-    &lt;/td&gt;
-    &lt;td&gt;Matt&lt;/td&gt;
+  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 06&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Oct 18&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Integrity and authenticated data structures&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/verena.pdf&#34;&gt;Verena&lt;/a&gt;
-      [
-      &lt;a href=&#34;https://cse130.programming.systems/assignments/verena/&#34;&gt;questions&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/papers/verena-annotated.pdf&#34;&gt;annotated&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/notes/verena/&#34;&gt;notes&lt;/a&gt;
-      ]
-    &lt;/td&gt;
-    &lt;td&gt;Zhaomo&lt;/td&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 08&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Browser and client-side web security&lt;/td&gt;
+  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 13&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Oct 20&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Software-based fault isolation&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/nacl.pdf&#34;&gt;NaCl&lt;/a&gt;
-      [
-      &lt;a href=&#34;https://cse130.programming.systems/assignments/nacl/&#34;&gt;questions&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/papers/nacl-annotated.pdf&#34;&gt;annotated&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/notes/nacl/&#34;&gt;notes&lt;/a&gt;
-      ]
-    &lt;/td&gt;
-    &lt;td&gt;Shravan&lt;/td&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 15&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 20&lt;/th&gt;
+    &lt;td&gt; President&#39;s day - no class&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 22&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 27&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 01&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Mar 06&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 08&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Mar 13&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 15&lt;/th&gt;
+    &lt;td&gt; &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;info&#34;&gt;
-    &lt;th class=&#34;date&#34;&gt;Oct 25&lt;/th&gt;
-    &lt;td colspan=&#34;2&#34;&gt;Hack time (no class, Deian at PLAS 2016)&lt;/td&gt;
+    &lt;th class=&#34;date&#34;&gt;Mar 22&lt;/th&gt;
+    &lt;td&gt;Final exam&lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Oct 27&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Permissions and privilege separation&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/chrome-extension-system.pdf&#34;&gt;Chrome extension system&lt;/a&gt;
-      [
-      &lt;a href=&#34;https://cse130.programming.systems/assignments/chrome-extension-system/&#34;&gt;questions&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/papers/chrome-extension-system-annotated.pdf&#34;&gt;annotated&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/notes/chrome-extension-system/&#34;&gt;notes&lt;/a&gt;
-      ]
-    &lt;/td&gt;
-    &lt;td&gt;
-      Ariana
-    &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Nov 01&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Label-based mandatory access control&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/cowl.pdf&#34;&gt;COWL&lt;/a&gt;
-      [
-      &lt;a href=&#34;https://cse130.programming.systems/assignments/cowl/&#34;&gt;questions&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/notes/cowl/&#34;&gt;notes&lt;/a&gt;
-      ]
-    &lt;/td&gt;
-    &lt;td&gt;Rohit&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Operating systems security&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Nov 03&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Micro-grammars and static bug checkers&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/uchex.pdf&#34;&gt;&amp;#181;chex&lt;/a&gt;
-      [
-      &lt;a href=&#34;https://cse130.programming.systems/assignments/uchex/&#34;&gt;questions&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/papers/uchex-annotated.pdf&#34;&gt;annotated&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/notes/uchex/&#34;&gt;notes&lt;/a&gt;
-      ]
-    &lt;/td&gt;
-    &lt;td&gt;Gary&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Nov 08&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Symbolic execution&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/s2e.pdf&#34;&gt;S2E&lt;/a&gt;
-      [
-      &lt;a href=&#34;https://cse130.programming.systems/assignments/s2e/&#34;&gt;questions&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/papers/s2e-annotated.pdf&#34;&gt;annotated&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/notes/s2e/&#34;&gt;notes&lt;/a&gt;
-      ]
-    &lt;/td&gt;
-    &lt;td&gt;Brian&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class=&#34;info&#34;&gt;
-    &lt;th class=&#34;date&#34;&gt;Nov 10&lt;/th&gt;
-    &lt;td colspan=&#34;2&#34;&gt;Hack time (no class, Oakland deadline)&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Nov 15&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Software-isolated processes and manifest-based programs&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/singularity.pdf&#34;&gt;Singularity&lt;/a&gt;
-      [
-      &lt;a href=&#34;https://cse130.programming.systems/assignments/singularity/&#34;&gt;questions&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/papers/singularity-annotated.pdf&#34;&gt;annotated&lt;/a&gt;,
-      &lt;a href=&#34;https://cse130.programming.systems/notes/singularity/&#34;&gt;notes&lt;/a&gt;
-      ]
-    &lt;/td&gt;
-    &lt;td&gt;Deian&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Nov 17&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Full-system verification&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/ironclad-apps.pdf&#34;&gt;Ironclad Apps&lt;/a&gt;
-    &lt;/td&gt;
-    &lt;td&gt;Frank&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Hardware security&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Nov 22&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Type systems for secure hardware development&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/secverilog.pdf&#34;&gt;SecVerilog&lt;/a&gt;
-    &lt;/td&gt;
-    &lt;td&gt;Abdul&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;tr class=&#34;info&#34;&gt;
-  &lt;th class=&#34;date&#34;&gt;Nov 24&lt;/th&gt;
-  &lt;td colspan=&#34;2&#34;&gt;Thanksgiving break&lt;/td&gt;
-&lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th class=&#34;date&#34;&gt;Nov 29&lt;/th&gt;
-    &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Security monitors for tagged hardware&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/micro-policies.pdf&#34;&gt;Micro-policies&lt;/a&gt;
-    &lt;/td&gt;
-    &lt;td&gt;Hannah&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Cryptography&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;tr&gt;
-  &lt;th class=&#34;date&#34;&gt;Dec 01&lt;/th&gt;
-  &lt;td&gt;
-      &lt;div class=&#34;class-topic&#34;&gt;Refinement types and verified protocols&lt;/div&gt;
-      &lt;a href=&#34;https://cse130.programming.systems/papers/mitls.pdf&#34;&gt;miTLS&lt;/a&gt;
-  &lt;/td&gt;
-  &lt;td&gt;AJ&lt;/td&gt;
-&lt;/tr&gt;
-&lt;!-- &lt;tr&gt; --&gt;
-&lt;!--   &lt;th class=&#34;date&#34;&gt;Dec 01&lt;/th&gt; --&gt;
-&lt;!--   &lt;td&gt; --&gt;
-&lt;!--     &lt;div class=&#34;class&amp;#45;topic&#34;&gt;Domain&amp;#45;specific languages for multi&amp;#45;party computations&lt;/div&gt; --&gt;
-&lt;!--     &lt;a href=&#34;https://cse130.programming.systems/papers/wys*.pdf&#34;&gt;Wys&lt;sup&gt;*&lt;/sup&gt;&lt;/a&gt; --&gt;
-&lt;!--   &lt;/td&gt; --&gt;
-&lt;!--   &lt;td&gt;Frank&lt;/td&gt; --&gt;
-&lt;!-- &lt;/tr&gt; --&gt;
-&lt;tr class=&#34;info&#34;&gt;
-  &lt;th class=&#34;date&#34;&gt;Dec 09&lt;/th&gt;
-  &lt;td&gt;Project presentations&lt;/td&gt;
-  &lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
 &lt;/table&gt;
 
 &lt;p&gt;
@@ -370,11 +169,12 @@ few special-topics in programming languages. The class also has a number of
 small labs where students get to implement some of the language features
 discussed in class.&lt;/p&gt;
 
-&lt;h4 id=&#34;lecture&#34;&gt;Lecture&lt;/h4&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Location:&lt;/strong&gt; Ledden Auditorium&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; Mondays and Wednesdays 6:30-7:50PM&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Section ID:&lt;/strong&gt; 895741&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lectures:&lt;/strong&gt; Mondays and Wednesdays, 6:30-7:50PM in Ledden Auditorium&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Section:&lt;/strong&gt; Fridays, 8:00-8:50AM in WLH 2005&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Staff email:&lt;/strong&gt; &lt;a href=&#34;mailto:ucsd-cse130-winter17@googlegroups.com&#34;&gt;ucsd-cse130-winter17@googlegroups.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Piazza:&lt;/strong&gt; &lt;a href=&#34;https://piazza.com/ucsd/winter2017/cse130&#34;&gt;https://piazza.com/ucsd/winter2017/cse130&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&#34;textbook&#34;&gt;Textbook&lt;/h4&gt;
@@ -386,41 +186,26 @@ discussed in class.&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;ISBN13:&lt;/strong&gt; 9780521780988&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;instructor&#34;&gt;Instructor&lt;/h4&gt;
+&lt;h4 id=&#34;course-staff&#34;&gt;Course Staff&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; &lt;a href=&#34;https://cseweb.ucsd.edu/~dstefan/&#34;&gt;Deian Stefan&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:deian+cse130@cs.ucsd.edu&#34;&gt;deian+cse130@cs.ucsd.edu&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Address:&lt;/strong&gt; CSE 3126&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; Tuesday 1:30-2:30PM or by appointment&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cseweb.ucsd.edu/~dstefan/&#34;&gt;Deian Stefan&lt;/a&gt; (Instructor)&lt;/li&gt;
+&lt;li&gt;Mario Alvarez (TA)&lt;/li&gt;
+&lt;li&gt;Atyansh Jaiswal (TA)&lt;/li&gt;
+&lt;li&gt;Abdul Alkhelaifi (TA)&lt;/li&gt;
+&lt;li&gt;Jiashen Wang (TA)&lt;/li&gt;
+&lt;li&gt;Matt Chan (tutor)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&#34;teaching-assistants&#34;&gt;Teaching Assistants&lt;/h5&gt;
+&lt;h4 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h4&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Mario M. Alvarez&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; Atyansh Jaiswal (AJ)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; Abdulrahman M. Alkhelaifi (Abdul)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; Jiashen Wang&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&#34;tutors&#34;&gt;Tutors&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Matthew Chee Long Chan (Matt)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;This course is based on material from Stanford&amp;rsquo;s and UCSD&amp;rsquo;s programming languages courses.
+Thanks to these fantastic instructors for all their hard work:
+&lt;a href=&#34;http://www.cs.tufts.edu/~kfisher/&#34;&gt;Kathleen Fisher&lt;/a&gt;,
+&lt;a href=&#34;http://ranjitjhala.github.io/&#34;&gt;Ranjit Jhala&lt;/a&gt;,
+&lt;a href=&#34;http://cseweb.ucsd.edu/~lerner/&#34;&gt;Sorin Lerner&lt;/a&gt;,
+&lt;a href=&#34;http://theory.stanford.edu/people/jcm/&#34;&gt;John C. Mitchell&lt;/a&gt;, and
+&lt;a href=&#34;http://ezyang.com/&#34;&gt;Edward Z. Yang&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -453,20 +238,16 @@ matters, please post a private question or contact the course staff by email.&lt
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Mario M. Alvarez&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; Atyansh Jaiswal (AJ)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; Abdulrahman M. Alkhelaifi (Abdul)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; Jiashen Wang&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA
+&lt;hr/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Atyansh Jaiswal (AJ)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA
+&lt;hr/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Abdulrahman M. Alkhelaifi (Abdul)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA
+&lt;hr/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Jiashen Wang&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h5 id=&#34;tutors&#34;&gt;Tutors&lt;/h5&gt;
