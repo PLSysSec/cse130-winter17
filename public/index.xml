@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CSE 130</title>
-    <link>https://cse130.programming.systems/index.xml</link>
+    <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/index.xml</link>
     <description>Recent content on CSE 130</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</managingEditor>
     <webMaster>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</webMaster>
     <lastBuildDate>Mon, 05 Sep 2016 20:19:41 -0700</lastBuildDate>
-    <atom:link href="https://cse130.programming.systems/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Course organization</title>
-      <link>https://cse130.programming.systems/about/</link>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/about/</link>
       <pubDate>Mon, 05 Sep 2016 20:19:41 -0700</pubDate>
       <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
-      <guid>https://cse130.programming.systems/about/</guid>
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/about/</guid>
       <description>
 
 &lt;p&gt;The course consists of lectures, written homeworks, and programming
@@ -68,11 +68,11 @@ time and location.  The final is &lt;strong&gt;open-book&lt;/strong&gt;.&lt;/p&g
     
     <item>
       <title>Syllabus</title>
-      <link>https://cse130.programming.systems/syllabus/</link>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/syllabus/</link>
       <pubDate>Mon, 05 Sep 2016 20:19:41 -0700</pubDate>
       <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
-      <guid>https://cse130.programming.systems/syllabus/</guid>
-      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cse130.programming.systems/css/bootstrap-table.css&#34;&gt;
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/syllabus/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/bootstrap-table.css&#34;&gt;
 
 &lt;table class=&#34;table table-hover&#34;&gt;
   &lt;thead&gt;
@@ -155,10 +155,10 @@ Please note that this syllabus is subject to change.
     
     <item>
       <title>CSE 130</title>
-      <link>https://cse130.programming.systems/index.html</link>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/index.html</link>
       <pubDate>Tue, 23 Aug 2016 01:59:45 -0700</pubDate>
       <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
-      <guid>https://cse130.programming.systems/index.html</guid>
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/index.html</guid>
       <description>
 
 &lt;p&gt;This course will cover basic concepts and design tradeoffs related to
@@ -211,10 +211,10 @@ Thanks to these fantastic instructors for all their hard work:
     
     <item>
       <title>Contact information</title>
-      <link>https://cse130.programming.systems/contact/</link>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/contact/</link>
       <pubDate>Tue, 23 Aug 2016 01:59:45 -0700</pubDate>
       <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
-      <guid>https://cse130.programming.systems/contact/</guid>
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/contact/</guid>
       <description>
 
 &lt;p&gt;For general information and questions, please post to the class

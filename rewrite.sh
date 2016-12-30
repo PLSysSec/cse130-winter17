@@ -1,5 +1,5 @@
-#for file in $(git log --name-only --pretty=oneline --full-index HEAD^^..HEAD public | grep -vE '^[0-9a-f]{40} ' | sort | uniq); do
-# for file in $(git diff --name-only --pretty=oneline public); do
-for file in $(find public -name *.html); do
-  sed -i "s#cse130.programming.systems#cseweb.ucsd.edu/~dstefan/cse130-winter17#" $file  &
+for file in $(grep -lR cse130.programming.systems public); do
+  sed -i .bak -e "s#cse130.programming.systems#cseweb.ucsd.edu/~dstefan/cse130-winter17#g;" $file
+  # sec creates .bak file, let's remove it
+  rm $file.bak
 done
