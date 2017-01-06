@@ -38,10 +38,17 @@ discussed in class.
 
 #### Acknowledgements
 
-This course is based on material from Stanford's and UCSD's programming languages courses.
+This course is based on material from Stanford's, UCSD's, and Tufts'
+programming languages courses.
 Thanks to these fantastic instructors for all their hard work:
 <a href="http://www.cs.tufts.edu/~kfisher/">Kathleen Fisher</a>,
 <a href="http://ranjitjhala.github.io/">Ranjit Jhala</a>,
 <a href="http://cseweb.ucsd.edu/~lerner/">Sorin Lerner</a>,
-<a href="http://theory.stanford.edu/people/jcm/">John C. Mitchell</a>, and
-<a href="http://ezyang.com/">Edward Z. Yang</a>.
+<a href="http://theory.stanford.edu/people/jcm/">John C. Mitchell</a>,
+<a href="http://www.cs.tufts.edu/~nr/">Norman Ramsey</a>, and
+<a href="http://ezyang.com/">Edward Z. Yang</a>. Some of the
+organizational/administrative things are thanks to <a
+href="http://www.scs.stanford.edu/~dm/">David Mazières</a> and <a
+href="http://cseweb.ucsd.edu/~hovav/">Hovav Shacham</a>.
+
+

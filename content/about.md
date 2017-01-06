@@ -2,7 +2,7 @@
 date = "2016-09-05T20:19:41-07:00"
 description = "description"
 draft = false
-title = "Course organization"
+title = "Course organization and policies"
 
 +++
 
@@ -34,18 +34,50 @@ during office hours counts towards your class participation.
 
 ###### Homework and programming assignments
 
-We will have weekly assignments, either in the form of written homeworks or
-programming assignments. These assignments are meant to both reinforce your
-knowledge of the concepts covered in lecture and get you to think beyond
+We will have almost weekly assignments, either in the form of written homeworks
+or programming assignments. These assignments are meant to both reinforce your
+knowledge of the concepts covered in lecture and get you to think about PL beyond
 lecture (e.g., if you were tasked with designing a new language).
 
-###### Midterm exam
+You are expected to work on assignments in groups of 3. All written homework
+must be typeset and submitted as a PDF using the online submission tool.
+All assignments must be submitted as a group.
 
-The exam will be held sometime in the middle of the quarter, in class. The
-midterm is **closed-book**, but you may use a double-sided cheat sheet
-(letter-size).
+If you consult anything (books, academic papers, internet resources, people not
+in your group) note this on your assignment submission. We encourage outside
+learning but expect you to not seek out specific details about a solution --
+anything submitted should be considered your own work. Similarly, you are
+expected to not publish or otherwise share you solutions at any point (even
+after the class is over).
 
-###### Final exam
+If you are unsure about what is allowed, please ask the course staff.
 
-The exam will be held on **TBD** in **TBD**. You **must** take the exam at this
-time and location.  The final is **open-book**.
+
+###### Exams
+
+The midterm exam will be held on **February 22**, in class. The midterm is
+**closed-book**, but you may use a double-sided cheat sheet (letter-size).
+
+The final exam will be held on **March 22** in **TBD**. You **must** take the exam at
+this time and location.  The final is **closed-book**, but you may use 2
+double-sided cheat sheets (letter-size).
+
+The exams will make up 70% of your grade and is calculated as: 
+
+```
+max( midterm > 0 ?  final : 0, (midterm + final) / 2)
+```
+
+This means that (1) you basically get a second chance if you don't so well on
+the midterm and (2) you must show up to both the midterm and the final.  If you
+need to miss either exam because of a documented medical emergency, contact the
+instructor immediately.
+
+##### Academic integrity and student conduct
+
+By taking this course, you implicitly agree to abide by the UCSD policies on <a
+href="https://senate.ucsd.edu/Operating-Procedures/Senate-Manual/appendices/2">Integrity
+of Scholarship</a> and <a
+href="https://students.ucsd.edu/sponsor/student-conduct/">Student Conduct</a>.
+University rules on integrity of scholarship and code of conduct are taken
+seriously and will be enforced.
