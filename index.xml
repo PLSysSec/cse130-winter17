@@ -12,7 +12,7 @@
     <atom:link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Course organization</title>
+      <title>Course organization and policies</title>
       <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/about/</link>
       <pubDate>Mon, 05 Sep 2016 20:19:41 -0700</pubDate>
       <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
@@ -48,21 +48,51 @@ during office hours counts towards your class participation.&lt;/p&gt;
 
 &lt;h6 id=&#34;homework-and-programming-assignments&#34;&gt;Homework and programming assignments&lt;/h6&gt;
 
-&lt;p&gt;We will have weekly assignments, either in the form of written homeworks or
-programming assignments. These assignments are meant to both reinforce your
-knowledge of the concepts covered in lecture and get you to think beyond
+&lt;p&gt;We will have almost weekly assignments, either in the form of written homeworks
+or programming assignments. These assignments are meant to both reinforce your
+knowledge of the concepts covered in lecture and get you to think about PL beyond
 lecture (e.g., if you were tasked with designing a new language).&lt;/p&gt;
 
-&lt;h6 id=&#34;midterm-exam&#34;&gt;Midterm exam&lt;/h6&gt;
+&lt;p&gt;You are expected to work on assignments in groups of 3. All written homework
+must be typeset and submitted as a PDF using the online submission tool.
+All assignments must be submitted as a group.&lt;/p&gt;
 
-&lt;p&gt;The exam will be held sometime in the middle of the quarter, in class. The
-midterm is &lt;strong&gt;closed-book&lt;/strong&gt;, but you may use a double-sided cheat sheet
-(letter-size).&lt;/p&gt;
+&lt;p&gt;If you consult anything (books, academic papers, internet resources, people not
+in your group) note this on your assignment submission. We encourage outside
+learning but expect you to not seek out specific details about a solution &amp;ndash;
+anything submitted should be considered your own work. Similarly, you are
+expected to not publish or otherwise share you solutions at any point (even
+after the class is over).&lt;/p&gt;
 
-&lt;h6 id=&#34;final-exam&#34;&gt;Final exam&lt;/h6&gt;
+&lt;p&gt;If you are unsure about what is allowed, please ask the course staff.&lt;/p&gt;
 
-&lt;p&gt;The exam will be held on &lt;strong&gt;TBD&lt;/strong&gt; in &lt;strong&gt;TBD&lt;/strong&gt;. You &lt;strong&gt;must&lt;/strong&gt; take the exam at this
-time and location.  The final is &lt;strong&gt;open-book&lt;/strong&gt;.&lt;/p&gt;
+&lt;h6 id=&#34;exams&#34;&gt;Exams&lt;/h6&gt;
+
+&lt;p&gt;The midterm exam will be held on &lt;strong&gt;February 22&lt;/strong&gt;, in class. The midterm is
+&lt;strong&gt;closed-book&lt;/strong&gt;, but you may use a double-sided cheat sheet (letter-size).&lt;/p&gt;
+
+&lt;p&gt;The final exam will be held on &lt;strong&gt;March 22&lt;/strong&gt; in &lt;strong&gt;TBD&lt;/strong&gt;. You &lt;strong&gt;must&lt;/strong&gt; take the exam at
+this time and location.  The final is &lt;strong&gt;closed-book&lt;/strong&gt;, but you may use 2
+double-sided cheat sheets (letter-size).&lt;/p&gt;
+
+&lt;p&gt;The exams will make up 70% of your grade and is calculated as:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;max( midterm &amp;gt; 0 ?  final : 0, (midterm + final) / 2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This means that (1) you basically get a second chance if you don&amp;rsquo;t so well on
+the midterm and (2) you must show up to both the midterm and the final.  If you
+need to miss either exam because of a documented medical emergency, contact the
+instructor immediately.&lt;/p&gt;
+
+&lt;h5 id=&#34;academic-integrity-and-student-conduct&#34;&gt;Academic integrity and student conduct&lt;/h5&gt;
+
+&lt;p&gt;By taking this course, you implicitly agree to abide by the UCSD policies on &lt;a
+href=&#34;https://senate.ucsd.edu/Operating-Procedures/Senate-Manual/appendices/2&#34;&gt;Integrity
+of Scholarship&lt;/a&gt; and &lt;a
+href=&#34;https://students.ucsd.edu/sponsor/student-conduct/&#34;&gt;Student Conduct&lt;/a&gt;.
+University rules on integrity of scholarship and code of conduct are taken
+seriously and will be enforced.&lt;/p&gt;
 </description>
     </item>
     
@@ -248,13 +278,18 @@ discussed in class.&lt;/p&gt;
 
 &lt;h4 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h4&gt;
 
-&lt;p&gt;This course is based on material from Stanford&amp;rsquo;s and UCSD&amp;rsquo;s programming languages courses.
+&lt;p&gt;This course is based on material from Stanford&amp;rsquo;s, UCSD&amp;rsquo;s, and Tufts&amp;rsquo;
+programming languages courses.
 Thanks to these fantastic instructors for all their hard work:
 &lt;a href=&#34;http://www.cs.tufts.edu/~kfisher/&#34;&gt;Kathleen Fisher&lt;/a&gt;,
 &lt;a href=&#34;http://ranjitjhala.github.io/&#34;&gt;Ranjit Jhala&lt;/a&gt;,
 &lt;a href=&#34;http://cseweb.ucsd.edu/~lerner/&#34;&gt;Sorin Lerner&lt;/a&gt;,
-&lt;a href=&#34;http://theory.stanford.edu/people/jcm/&#34;&gt;John C. Mitchell&lt;/a&gt;, and
-&lt;a href=&#34;http://ezyang.com/&#34;&gt;Edward Z. Yang&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;http://theory.stanford.edu/people/jcm/&#34;&gt;John C. Mitchell&lt;/a&gt;,
+&lt;a href=&#34;http://www.cs.tufts.edu/~nr/&#34;&gt;Norman Ramsey&lt;/a&gt;, and
+&lt;a href=&#34;http://ezyang.com/&#34;&gt;Edward Z. Yang&lt;/a&gt;. Some of the
+organizational/administrative things are thanks to &lt;a
+href=&#34;http://www.scs.stanford.edu/~dm/&#34;&gt;David Mazières&lt;/a&gt; and &lt;a
+href=&#34;http://cseweb.ucsd.edu/~hovav/&#34;&gt;Hovav Shacham&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
