@@ -34,7 +34,5 @@ matters, please post a private question or contact the course staff by email.
 - **Name:** Jiashen Wang
 - **Office hours:** TBA in TBA
 
-##### Tutors
-
 - **Name:** Matthew Chee Long Chan (Matt)
 - **Office hours:** TBA in TBA

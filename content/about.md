@@ -20,8 +20,8 @@ course in of itself.
 #### Grading
 
 -  5% Participation/pre-lecture readings
-- 25% Homework and programming assignments
-- 35% Midterm exam
+- 30% Homework and programming assignments
+- 30% Midterm exam
 - 35% Final exam
 
 ###### Participation/pre-lecture readings
@@ -34,21 +34,25 @@ during office hours counts towards your class participation.
 
 ###### Homework and programming assignments
 
-We will have almost weekly assignments, either in the form of written homeworks
-or programming assignments. These assignments are meant to both reinforce your
-knowledge of the concepts covered in lecture and get you to think about PL beyond
-lecture (e.g., if you were tasked with designing a new language).
+We will have almost weekly assignments, in the form of written homeworks and/or
+programming assignments. These assignments are meant to both reinforce your
+knowledge of the concepts covered in lecture and get you to think about PL
+beyond lecture (e.g., if you were tasked with designing a new language).
 
-You are expected to work on assignments in groups of 3. All written homework
-must be typeset and submitted as a PDF using the online submission tool.
-All assignments must be submitted as a group.
+You are expected to work on written assignments in groups of 3. All written
+homework must be typeset and submitted as a PDF using the online submission
+tool.  All written assignments must be submitted as a group.
+
+You are expected to work on the programming assignments by yourself. You may
+discuss the assignments with students from the course, in general, but not any
+specific solution.
 
 If you consult anything (books, academic papers, internet resources, people not
-in your group) note this on your assignment submission. We encourage outside
-learning but expect you to not seek out specific details about a solution --
-anything submitted should be considered your own work. Similarly, you are
-expected to not publish or otherwise share you solutions at any point (even
-after the class is over).
+in your group) when working on the assignments, note this in your submission.
+We encourage outside learning but expect you to not seek out specific details
+about a solution -- anything submitted should be considered your own work.
+Similarly, you are expected to not publish or otherwise share your solutions at
+any point (even after the class is over).
 
 If you are unsure about what is allowed, please ask the course staff.
 
@@ -58,14 +62,15 @@ If you are unsure about what is allowed, please ask the course staff.
 The midterm exam will be held on **February 22**, in class. The midterm is
 **closed-book**, but you may use a double-sided cheat sheet (letter-size).
 
-The final exam will be held on **March 22** in **TBD**. You **must** take the exam at
-this time and location.  The final is **closed-book**, but you may use 2
-double-sided cheat sheets (letter-size).
+The final exam will be held on **March 22** in **TBD**. You **must** take the
+exam at this time and location.  The final is **closed-book**, but you may use
+2 double-sided cheat sheets (letter-size).
 
-The exams will make up 70% of your grade and is calculated as: 
+The exams will make up 65% of your grade. Since the final is cumulative your
+midterm grade will be calculated as:
 
 ```
-max( midterm > 0 ?  final : 0, (midterm + final) / 2)
+max( midterm > 0 ?  max(final, midterm) : 0)
 ```
 
 This means that (1) you basically get a second chance if you don't so well on
