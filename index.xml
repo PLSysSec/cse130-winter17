@@ -33,8 +33,8 @@ course in of itself.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;5% Participation/pre-lecture readings&lt;/li&gt;
-&lt;li&gt;25% Homework and programming assignments&lt;/li&gt;
-&lt;li&gt;35% Midterm exam&lt;/li&gt;
+&lt;li&gt;30% Homework and programming assignments&lt;/li&gt;
+&lt;li&gt;30% Midterm exam&lt;/li&gt;
 &lt;li&gt;35% Final exam&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -48,21 +48,25 @@ during office hours counts towards your class participation.&lt;/p&gt;
 
 &lt;h6 id=&#34;homework-and-programming-assignments&#34;&gt;Homework and programming assignments&lt;/h6&gt;
 
-&lt;p&gt;We will have almost weekly assignments, either in the form of written homeworks
-or programming assignments. These assignments are meant to both reinforce your
-knowledge of the concepts covered in lecture and get you to think about PL beyond
-lecture (e.g., if you were tasked with designing a new language).&lt;/p&gt;
+&lt;p&gt;We will have almost weekly assignments, in the form of written homeworks and/or
+programming assignments. These assignments are meant to both reinforce your
+knowledge of the concepts covered in lecture and get you to think about PL
+beyond lecture (e.g., if you were tasked with designing a new language).&lt;/p&gt;
 
-&lt;p&gt;You are expected to work on assignments in groups of 3. All written homework
-must be typeset and submitted as a PDF using the online submission tool.
-All assignments must be submitted as a group.&lt;/p&gt;
+&lt;p&gt;You are expected to work on written assignments in groups of 3. All written
+homework must be typeset and submitted as a PDF using the online submission
+tool.  All written assignments must be submitted as a group.&lt;/p&gt;
+
+&lt;p&gt;You are expected to work on the programming assignments by yourself. You may
+discuss the assignments with students from the course, in general, but not any
+specific solution.&lt;/p&gt;
 
 &lt;p&gt;If you consult anything (books, academic papers, internet resources, people not
-in your group) note this on your assignment submission. We encourage outside
-learning but expect you to not seek out specific details about a solution &amp;ndash;
-anything submitted should be considered your own work. Similarly, you are
-expected to not publish or otherwise share you solutions at any point (even
-after the class is over).&lt;/p&gt;
+in your group) when working on the assignments, note this in your submission.
+We encourage outside learning but expect you to not seek out specific details
+about a solution &amp;ndash; anything submitted should be considered your own work.
+Similarly, you are expected to not publish or otherwise share your solutions at
+any point (even after the class is over).&lt;/p&gt;
 
 &lt;p&gt;If you are unsure about what is allowed, please ask the course staff.&lt;/p&gt;
 
@@ -71,13 +75,14 @@ after the class is over).&lt;/p&gt;
 &lt;p&gt;The midterm exam will be held on &lt;strong&gt;February 22&lt;/strong&gt;, in class. The midterm is
 &lt;strong&gt;closed-book&lt;/strong&gt;, but you may use a double-sided cheat sheet (letter-size).&lt;/p&gt;
 
-&lt;p&gt;The final exam will be held on &lt;strong&gt;March 22&lt;/strong&gt; in &lt;strong&gt;TBD&lt;/strong&gt;. You &lt;strong&gt;must&lt;/strong&gt; take the exam at
-this time and location.  The final is &lt;strong&gt;closed-book&lt;/strong&gt;, but you may use 2
-double-sided cheat sheets (letter-size).&lt;/p&gt;
+&lt;p&gt;The final exam will be held on &lt;strong&gt;March 22&lt;/strong&gt; in &lt;strong&gt;TBD&lt;/strong&gt;. You &lt;strong&gt;must&lt;/strong&gt; take the
+exam at this time and location.  The final is &lt;strong&gt;closed-book&lt;/strong&gt;, but you may use
+2 double-sided cheat sheets (letter-size).&lt;/p&gt;
 
-&lt;p&gt;The exams will make up 70% of your grade and is calculated as:&lt;/p&gt;
+&lt;p&gt;The exams will make up 65% of your grade. Since the final is cumulative your
+midterm grade will be calculated as:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;max( midterm &amp;gt; 0 ?  final : 0, (midterm + final) / 2)
+&lt;pre&gt;&lt;code&gt;max( midterm &amp;gt; 0 ?  max(final, midterm) : 0)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This means that (1) you basically get a second chance if you don&amp;rsquo;t so well on
@@ -121,7 +126,7 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 11&lt;/th&gt;
     &lt;td&gt;
-      Haskell crash course
+      Foundations and the lambda calculus
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 16&lt;/th&gt;
@@ -129,12 +134,12 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 18&lt;/th&gt;
     &lt;td&gt;
-      Foundations and the lambda calculus
+      Scope, storage management, and function implementation
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 23&lt;/th&gt;
     &lt;td&gt;
-      Storage management and function implementation
+      Haskell crash course
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
@@ -331,14 +336,12 @@ matters, please post a private question or contact the course staff by email.&lt
 &lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA
 &lt;hr/&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Jiashen Wang&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;h5 id=&#34;tutors&#34;&gt;Tutors&lt;/h5&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/p&gt;&lt;/li&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Matthew Chee Long Chan (Matt)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; Matthew Chee Long Chan (Matt)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
