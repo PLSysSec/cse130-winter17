@@ -8,8 +8,45 @@
     <language>en-us</language>
     <managingEditor>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</managingEditor>
     <webMaster>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</webMaster>
-    <lastBuildDate>Mon, 05 Sep 2016 20:19:41 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 07 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Intro and JavaScript</title>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js/</link>
+      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
+      <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js/</guid>
+      <description>
+
+&lt;h3 id=&#34;recommended-reading&#34;&gt;Recommended reading&lt;/h3&gt;
+
+&lt;p&gt;If you have not worked with JavaScript before, take some time to familiarize
+yourself with the basics of the language, as most of the labs in this class
+will be in JavaScript.&lt;/p&gt;
+
+&lt;p&gt;We recommend the &lt;a
+href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide&#34;&gt;Mozilla
+Developer Network&amp;rsquo;s JavaScript Guide&lt;/a&gt;,
+but there are many other tutorials on the Internet.&lt;/p&gt;
+
+&lt;p&gt;Dave Herman&amp;rsquo;s &lt;a href=&#34;http://effectivejs.com/&#34;&gt;Effective JavaScript&lt;/a&gt; is
+very good reference that covers a lot of the JavaScript intricacies.  You will
+not this for the class, but if you end up writing JavaScript code in the
+outside world, this book is must-read.&lt;/p&gt;
+
+&lt;h3 id=&#34;additional-resources-reading-for-the-curious&#34;&gt;Additional resources/reading for the curious&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://leanpub.com/understandinges6/read#leanpub-auto-block-bindings&#34;&gt;Block bindings&lt;/a&gt; and the difference between &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;let&lt;/code&gt;, and &lt;code&gt;const&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Why a language like JavaScript took over the world? Not that uncommon, see &lt;a href=&#34;https://www.jwz.org/doc/worse-is-better.html&#34;&gt;The Rise of &amp;ldquo;Worse is Better&amp;rdquo;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures&#34;&gt;Closures&lt;/a&gt; explained; see, especially the creating closures in a loop section.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://curiosity-driven.org/private-properties-in-javascript&#34;&gt;Private properties in (modern) JavaScript&lt;/a&gt;; we will revisit the idea of private properties (encapsulation) later in the course.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management&#34;&gt;Short intro to memory management for JavaScript&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hacks.mozilla.org/category/es6-in-depth/&#34;&gt;ES6 In Depth Articles&lt;/a&gt; contains more information on the more recent features introduced to JavaScript.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Course organization and policies</title>
@@ -122,6 +159,7 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 09&lt;/th&gt;
     &lt;td&gt; 
       Intro and JavaScript crash course
+      &lt;br/&gt;[ &lt;a href=&#34;../notes/intro-js&#34;&gt;notes&lt;/a&gt; ]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 11&lt;/th&gt;
