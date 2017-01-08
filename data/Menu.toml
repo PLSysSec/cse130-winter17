@@ -11,10 +11,10 @@
     Name = "Contact"
     URL = "/contact"
 
-# [3notes]
-#     Name = "Lecture notes"
-#     URL = "/notes"
-# 
+[3notes]
+    Name = "Notes & Readings"
+    URL = "/notes"
+
 # [4assignments]
 #     Name = "Assignments"
 #     URL = "/assignments"
