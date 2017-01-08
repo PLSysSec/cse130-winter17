@@ -6,7 +6,7 @@ url = "index.html"
 
 +++
 
-This course will cover basic concepts and design tradeoffs related to
+This course will cover basic concepts and design trade-offs related to
 programming languages. The first half of the course focuses on functions,
 types, scope, storage management, exceptions, and continuations. The second
 half covers object-oriented features and concurrency. We will conclude with a
@@ -22,10 +22,17 @@ discussed in class.
 
 #### Textbook
 
-* **Title:** Concepts In Programming Languages
-* **Author:** John C. Mitchell
-* **Publisher:** Cambridge University Press
-* **ISBN13:** 9780521780988
+We will be following John Mitchell's <a
+href="https://books.google.com/books?id=AUUgAwAAQBAJ">Concepts In Programming
+Languages</a> textbook and assigning reading from this book and various other
+online resources and papers. Some of the book chapters have been revised, we
+will be handing out PDFs of these chapters. Cheaper renting options for the book
+seem to be available online (e.g., on <a
+href="https://www.amazon.com/Concepts-Programming-Languages-John-Mitchell-ebook/dp/B00AHTN2TA/ref=mt_kindle?_encoding=UTF8&me=">Amazon</a>).
+
+If you are serious about programming languages Benjamin Pierce's <a
+href="https://www.cis.upenn.edu/~bcpierce/tapl/">Types and Programming
+Languages</a> is a must.
 
 #### Course Staff
 

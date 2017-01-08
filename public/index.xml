@@ -245,7 +245,7 @@ Please note that this syllabus is subject to change.
       <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/index.html</guid>
       <description>
 
-&lt;p&gt;This course will cover basic concepts and design tradeoffs related to
+&lt;p&gt;This course will cover basic concepts and design trade-offs related to
 programming languages. The first half of the course focuses on functions,
 types, scope, storage management, exceptions, and continuations. The second
 half covers object-oriented features and concurrency. We will conclude with a
@@ -263,12 +263,17 @@ discussed in class.&lt;/p&gt;
 
 &lt;h4 id=&#34;textbook&#34;&gt;Textbook&lt;/h4&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Title:&lt;/strong&gt; Concepts In Programming Languages&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Author:&lt;/strong&gt; John C. Mitchell&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Publisher:&lt;/strong&gt; Cambridge University Press&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ISBN13:&lt;/strong&gt; 9780521780988&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;We will be following John Mitchell&amp;rsquo;s &lt;a
+href=&#34;https://books.google.com/books?id=AUUgAwAAQBAJ&#34;&gt;Concepts In Programming
+Languages&lt;/a&gt; textbook and assigning reading from this book and various other
+online resources and papers. Some of the book chapters have been revised, we
+will be handing out PDFs of these chapters. Cheaper renting options for the book
+seem to be available online (e.g., on &lt;a
+href=&#34;https://www.amazon.com/Concepts-Programming-Languages-John-Mitchell-ebook/dp/B00AHTN2TA/ref=mt_kindle?_encoding=UTF8&amp;me=&#34;&gt;Amazon&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;If you are serious about programming languages Benjamin Pierce&amp;rsquo;s &lt;a
+href=&#34;https://www.cis.upenn.edu/~bcpierce/tapl/&#34;&gt;Types and Programming
+Languages&lt;/a&gt; is a must.&lt;/p&gt;
 
 &lt;h4 id=&#34;course-staff&#34;&gt;Course Staff&lt;/h4&gt;
 
