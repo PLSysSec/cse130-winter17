@@ -32,7 +32,7 @@ matters, please post a private question or contact the course staff by email.
 - **Office hours:** TBA in TBA
 <hr/>
 - **Name:** Jiashen Wang
-- **Office hours:** TBA in TBA
+- **Office hours:** Friday 9 AM - 10 AM in CSE Basement (Room TBA)
 
 - **Name:** Matthew Chee Long Chan (Matt)
 - **Office hours:** TBA in TBA
