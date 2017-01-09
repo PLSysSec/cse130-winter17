@@ -26,7 +26,7 @@ matters, please post a private question or contact the course staff by email.
 - **Office hours:** TBA in TBA
 <hr/>
 - **Name:** Atyansh Jaiswal (AJ)
-- **Office hours:** TBA in TBA
+- **Office hours:** Tuesday 4-5PM in CSE 3111
 <hr/>
 - **Name:** Abdulrahman M. Alkhelaifi (Abdul)
 - **Office hours:** (tentative) Thursday 3 - 4 PM in TBA
