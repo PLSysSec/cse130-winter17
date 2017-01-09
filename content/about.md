@@ -70,7 +70,7 @@ The exams will make up 65% of your grade. Since the final is cumulative your
 midterm grade will be calculated as:
 
 ```
-max( midterm > 0 ?  max(final, midterm) : 0)
+midterm > 0 ?  max(final, midterm) : 0
 ```
 
 This means that (1) you basically get a second chance if you don't so well on

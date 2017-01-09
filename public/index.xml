@@ -119,7 +119,7 @@ exam at this time and location.  The final is &lt;strong&gt;closed-book&lt;/stro
 &lt;p&gt;The exams will make up 65% of your grade. Since the final is cumulative your
 midterm grade will be calculated as:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;max( midterm &amp;gt; 0 ?  max(final, midterm) : 0)
+&lt;pre&gt;&lt;code&gt;midterm &amp;gt; 0 ?  max(final, midterm) : 0
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This means that (1) you basically get a second chance if you don&amp;rsquo;t so well on
@@ -157,7 +157,7 @@ seriously and will be enforced.&lt;/p&gt;
     &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Functions&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 09&lt;/th&gt;
-    &lt;td&gt; 
+    &lt;td&gt;
       Intro and JavaScript crash course
       &lt;br/&gt;[ &lt;a href=&#34;../notes/intro-js&#34;&gt;notes&lt;/a&gt; ]
     &lt;/td&gt;
@@ -165,7 +165,7 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 11&lt;/th&gt;
     &lt;td&gt;
       Foundations and the lambda calculus
-      &lt;br/&gt;[ readings: 4.1.2, 4.2 ]
+      &lt;br/&gt;[ readings: 4.1.2, 4.2, &lt;a href=&#34;http://www.cse.chalmers.se/research/group/logic/TypesSS05/Extra/geuvers.pdf&#34;&gt;additional material&lt;/a&gt; ]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 16&lt;/th&gt;
@@ -232,7 +232,7 @@ seriously and will be enforced.&lt;/p&gt;
     &lt;td&gt; Midterm exam &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 27&lt;/th&gt;
-    &lt;td&gt; 
+    &lt;td&gt;
       Subtyping and inheritance
     &lt;/td&gt;
   &lt;/tr&gt;
@@ -260,7 +260,7 @@ seriously and will be enforced.&lt;/p&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 15&lt;/th&gt;
-    &lt;td&gt; 
+    &lt;td&gt;
       Special topic/Invited talk
     &lt;/td&gt;
   &lt;/tr&gt;
@@ -371,21 +371,19 @@ matters, please post a private question or contact the course staff by email.&lt
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Mario M. Alvarez&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA
+&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; Monday, 4pm-5pm in CSE B240A starting &lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;
 &lt;hr/&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Atyansh Jaiswal (AJ)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA
+&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; Tuesday 4-5PM in CSE 3111
 &lt;hr/&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Abdulrahman M. Alkhelaifi (Abdul)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA
+&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; Thursday 3 - 4 PM in CSE B260A
 &lt;hr/&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Jiashen Wang&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; Matthew Chee Long Chan (Matt)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; TBA in TBA&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; Friday 9 AM - 10 AM in CSE Basement (Room TBA)
+&lt;hr/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Matthew C Chan&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; (tentative) Tuesday 3 - 4 PM in CSE 3111&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
