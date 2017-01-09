@@ -29,7 +29,7 @@ matters, please post a private question or contact the course staff by email.
 - **Office hours:** TBA in TBA
 <hr/>
 - **Name:** Abdulrahman M. Alkhelaifi (Abdul)
-- **Office hours:** TBA in TBA
+- **Office hours:** (tentative) Thursday 3 - 4 PM in TBA
 <hr/>
 - **Name:** Jiashen Wang
 - **Office hours:** Friday 9 AM - 10 AM in CSE Basement (Room TBA)
