@@ -17,7 +17,7 @@ matters, please post a private question or contact the course staff by email.
 
 - **Name:** [Deian Stefan](https://cseweb.ucsd.edu/~dstefan/)
 - **Email:** <deian+cse130@cs.ucsd.edu>
-- **Address:** CSE 3126 
+- **Address:** CSE 3126
 - **Office Hours:** Wed 1:30-2:30PM or by appointment
 
 ##### Teaching Assistants
@@ -34,5 +34,5 @@ matters, please post a private question or contact the course staff by email.
 - **Name:** Jiashen Wang
 - **Office hours:** Friday 9 AM - 10 AM in CSE Basement (Room TBA)
 <hr/>
-- **Name:** Matthew Chee Long Chan (Matt)
-- **Office hours:** TBA in TBA
+- **Name:** Matthew C Chan
+- **Office hours:** (tentative) Wednesday 3 - 4 PM in CSE 3111
