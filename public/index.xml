@@ -19,6 +19,52 @@
       <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js/</guid>
       <description>
 
+&lt;h3 id=&#34;lecture-slides-and-code&#34;&gt;Lecture slides and code&lt;/h3&gt;
+
+&lt;p&gt;You can get the slides &lt;a href=&#34;../../slides/js-nutshell.pdf&#34;&gt;here&lt;/a&gt;. The
+slides refer to some JavaScript files, provided below:&lt;/p&gt;
+
+&lt;p&gt;Code illustrating how to implement block scoping with functions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/scope-modern.js&#34;&gt;scope-modern.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/scope-var.js&#34;&gt;scope-var.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/scope-modernize-var.js&#34;&gt;scope-modernize-var.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/scope-modernize-var-pretty.js&#34;&gt;scope-modernize-var-pretty.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Code illustrating the use of callback to perform synchronous and asynchronous
+filesystem reads:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/perf-sync.js&#34;&gt;perf-sync.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/perf-async.js&#34;&gt;perf-async.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/perf-async-2.js&#34;&gt;perf-async-2.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/perf-async-3.js&#34;&gt;perf-async-3.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Code illustrating the use of high order functions and closures:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/expressive.js&#34;&gt;expressive.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/hof.js&#34;&gt;hof.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/closure.js&#34;&gt;closure.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Code illustrating the use of functions to implement modules:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/module-node.js&#34;&gt;module-node.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/module.js&#34;&gt;module.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Code illustrating simple methods and constructors for JavaScript:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/receiver.js&#34;&gt;receiver.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/class.js&#34;&gt;class.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h3 id=&#34;recommended-reading&#34;&gt;Recommended reading&lt;/h3&gt;
 
 &lt;p&gt;If you have not worked with JavaScript before, take some time to familiarize
@@ -159,7 +205,7 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 09&lt;/th&gt;
     &lt;td&gt;
       Intro and JavaScript crash course
-      &lt;br/&gt;[ &lt;a href=&#34;../notes/intro-js&#34;&gt;notes&lt;/a&gt; ]
+      &lt;br/&gt;[ &lt;a href=&#34;../notes/intro-js&#34;&gt;notes&lt;/a&gt; | &lt;a href=&#34;../slides/intro.pdf&#34;&gt;intro slides&lt;/a&gt; | &lt;a href=&#34;../slides/js-nutshell.pdf&#34;&gt;JavaScript slides&lt;/a&gt; ]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 11&lt;/th&gt;

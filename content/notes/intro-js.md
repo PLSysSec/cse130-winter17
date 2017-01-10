@@ -7,6 +7,42 @@ title = "Intro and JavaScript"
 
 +++
 
+### Lecture slides and code
+
+You can get the slides <a href="../../slides/js-nutshell.pdf">here</a>. The
+slides refer to some JavaScript files, provided below:
+
+Code illustrating how to implement block scoping with functions:
+
+- <a href="../../code/intro-js/scope-modern.js">scope-modern.js</a>
+- <a href="../../code/intro-js/scope-var.js">scope-var.js</a>
+- <a href="../../code/intro-js/scope-modernize-var.js">scope-modernize-var.js</a>
+- <a href="../../code/intro-js/scope-modernize-var-pretty.js">scope-modernize-var-pretty.js</a>
+
+Code illustrating the use of callback to perform synchronous and asynchronous
+filesystem reads:
+
+- <a href="../../code/intro-js/perf-sync.js">perf-sync.js</a>
+- <a href="../../code/intro-js/perf-async.js">perf-async.js</a>
+- <a href="../../code/intro-js/perf-async-2.js">perf-async-2.js</a>
+- <a href="../../code/intro-js/perf-async-3.js">perf-async-3.js</a>
+
+Code illustrating the use of high order functions and closures:
+
+- <a href="../../code/intro-js/expressive.js">expressive.js</a>
+- <a href="../../code/intro-js/hof.js">hof.js</a>
+- <a href="../../code/intro-js/closure.js">closure.js</a>
+
+Code illustrating the use of functions to implement modules:
+
+- <a href="../../code/intro-js/module-node.js">module-node.js</a>
+- <a href="../../code/intro-js/module.js">module.js</a>
+
+Code illustrating simple methods and constructors for JavaScript:
+
+- <a href="../../code/intro-js/receiver.js">receiver.js</a>
+- <a href="../../code/intro-js/class.js">class.js</a>
+
 ### Recommended reading
 
 If you have not worked with JavaScript before, take some time to familiarize
