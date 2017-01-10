@@ -32,7 +32,7 @@ matters, please post a private question or contact the course staff by email.
 - **Office hours:** Thursday 3 - 4 PM in CSE B260A
 <hr/>
 - **Name:** Jiashen Wang
-- **Office hours:** Friday 9 AM - 10 AM in CSE Basement (Room TBA)
+- **Office hours:** Friday 9 AM - 10 AM in CSE Basement 240A
 <hr/>
-- **Name:** Matthew C Chan
-- **Office hours:** (tentative) Tuesday 3 - 4 PM in CSE 3111
+- **Name:** Matthew Chan
+- **Office hours:** Wednesday 5 - 6 PM in CSE 3111
