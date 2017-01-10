@@ -47,6 +47,9 @@ You are expected to work on the programming assignments by yourself. You may
 discuss the assignments with students from the course, in general, but not any
 specific solution.
 
+You have 7 late days that may be used towards homeworks and assignments. See
+the <a href="../slides/intro.pdf">intro slides</a> for more information.
+
 If you consult anything (books, academic papers, internet resources, people not
 in your group) when working on the assignments, note this in your submission.
 We encourage outside learning but expect you to not seek out specific details
@@ -55,7 +58,6 @@ Similarly, you are expected to not publish or otherwise share your solutions at
 any point (even after the class is over).
 
 If you are unsure about what is allowed, please ask the course staff.
-
 
 ###### Exams
 
