@@ -19,8 +19,8 @@
       <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code/</guid>
       <description>
 
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css&#34;&gt;
-&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js&#34;&gt;&lt;/script&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/default.min.css&#34;&gt;
+&lt;script src=&#34;https://cseweb.ucsd.edu/~dstefan/cse130-winter17/js/highlight.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;h3 id=&#34;block-scoping-with-functions&#34;&gt;Block scoping with functions:&lt;/h3&gt;
