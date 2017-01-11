@@ -2,30 +2,419 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CSE 130</title>
-    <link>https://cse130.programming.systems/index.xml</link>
+    <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/index.xml</link>
     <description>Recent content on CSE 130</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</managingEditor>
     <webMaster>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</webMaster>
     <lastBuildDate>Mon, 09 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://cse130.programming.systems/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The power of JavaScript first-class functions</title>
-      <link>https://cse130.programming.systems/notes/intro-js-code/</link>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code/</link>
       <pubDate>Mon, 09 Jan 2017 00:00:00 +0000</pubDate>
       <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
-      <guid>https://cse130.programming.systems/notes/intro-js-code/</guid>
-      <description></description>
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code/</guid>
+      <description>
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css&#34;&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;h3 id=&#34;block-scoping-with-functions&#34;&gt;Block scoping with functions:&lt;/h3&gt;
+
+&lt;p&gt;Modern JavaScript has block scoping when using &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; binders:&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;scope-modern&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;scope-modern&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+function hello(x) {
+  console.log(`A: x = ${x}`); // ??
+  {
+    const x = 45;
+    console.log(`B: x = ${x}`); // ??
+  }
+  {
+    console.log(`C: x = ${x}`); // ??
+  }
+}
+hello(42);
+
+&lt;/div&gt;
+
+
+&lt;p&gt;This is not true for &lt;code&gt;var&lt;/code&gt; binders, which are scoped to the nearest function scope (if one exists, otherwise, the global scope):&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;scope-var&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;scope-var&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+function hello(x) {
+  console.log(`A: x = ${x}`); // ??
+  {
+    var x = 45;
+    console.log(`B: x = ${x}`); // ??
+  }
+  {
+    console.log(`C: x = ${x}`); // ??
+  }
+}
+
+hello(42);
+
+&lt;/div&gt;
+
+
+&lt;p&gt;We can, however, introdue block scoping to code that only uses &lt;code&gt;var&lt;/code&gt;
+declarations by using first-class functions to create a new function scope:&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;scope-modernize-var&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;scope-modernize-var&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+function hello(x) {
+  console.log(`A: x = ${x}`); // ??
+  (function () {
+    var x = 45;
+    console.log(`B: x = ${x}`); // ??
+  })();
+  (function () {
+    console.log(`C: x = ${x}`); // ??
+  })();
+}
+
+hello(42);
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Rather than use the verbose &lt;code&gt;function&lt;/code&gt; declarations, we can also write anonymous functions using the fat arrow (&lt;code&gt;=&amp;gt;&lt;/code&gt;), as such:&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;scope-modernize-var-pretty&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;scope-modernize-var-pretty&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+function hello(x) {
+  console.log(`A: x = ${x}`); // ??
+  (() =&gt; {
+    var x = 45;
+    console.log(`B: x = ${x}`); // ??
+  })();
+  (() =&gt; {
+    console.log(`C: x = ${x}`); // ??
+  })();
+}
+
+hello(42);
+
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;callbacks-for-performing-concurrent-asynchronous-filesystem-reads&#34;&gt;Callbacks for performing concurrent, asynchronous filesystem reads:&lt;/h2&gt;
+
+&lt;p&gt;Node.js ships with a code JavaScript library that can be used to read and write files.
+Node.js exposes functions for reading (writing) files synchronously:&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;perf-sync&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;perf-sync&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+const fs = require(&#39;fs&#39;);
+
+prepFiles(); // ignore, this we&#39;re just calling this function to populate filesystem
+
+const r1 = fs.readFileSync(&#39;./a.txt&#39;, &#39;utf8&#39;); // blocks until read is done
+processFile(&#39;a.txt&#39;, r1); //blocks until processing (write) is done
+const r2 = fs.readFileSync(&#39;./b.txt&#39;, &#39;utf8&#39;); // etc.
+processFile(&#39;b.txt&#39;, r2);
+
+// note that you can declare a function after the point it&#39;s used. Hoisting
+// essentially moves it to the top.
+function processFile(fname, str) {
+  fs.writeFileSync(`/tmp/${fname}`, str);
+  console.log(`DONE writing /tmp/${fname}`);
+}
+
+function prepFiles() {
+	// our examples read these two files, let&#39;s make sure that they exist on the runkit machine
+  fs.writeFileSync(&#39;./a.txt&#39;, &#39;alice!&#39;);
+  fs.writeFileSync(&#39;./b.txt&#39;, &#39;bob!&#39;);
+}
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Note that each of the reads and writes block, waiting for the files to be read and processed. But this need not be the case. We can leverage the fact that the underling runtime and OS have concurrency and we can read the files concurrently:
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;perf-async&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;perf-async&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+const fs = require(&#39;fs&#39;);
+
+prepFiles(); // ignore, this we&#39;re just calling this function to populate filesystem
+
+fs.readFile(&#39;./a.txt&#39;, &#39;utf8&#39;, cb1); // returns immediately, cb1 is queued on the event loop and called later when actual file read is done
+fs.readFile(&#39;./b.txt&#39;, &#39;utf8&#39;, cb2); // returns immediately, &#34; &#34;
+
+function processFile(fname, str) {
+  fs.writeFileSync(`/tmp/${fname}`, str);
+  console.log(`DONE writing /tmp/${fname}`);
+}
+
+function cb1(err, str) {
+  processFile(&#39;a.txt&#39;, str);
+}
+
+function cb2(err, str) {
+  processFile(&#39;b.txt&#39;, str);
+}
+
+function prepFiles() {
+	// our examples read these two files, let&#39;s make sure that they exist on the runkit machine
+  fs.writeFileSync(&#39;./a.txt&#39;, &#39;alice!&#39;);
+  fs.writeFileSync(&#39;./b.txt&#39;, &#39;bob!&#39;);
+}
+
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The above code tells the Node.js runtime to read the file &lt;code&gt;a,txt&lt;/code&gt;, without
+blocking, and call function &lt;code&gt;cb1&lt;/code&gt; with the error condition and data once it
+read the file (or failed). Note that JavaScript always runs code to completion for each &lt;em&gt;event loop&lt;/em&gt;.
+In the first event loop we tell the runtime to read files, and the runtime, in later event loops, will call our callback functions.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Challenge:&lt;/strong&gt; further modify this code to eliminate the synchronous writes.&lt;/p&gt;
+
+&lt;p&gt;Since JavaScript has first-class functions, we can clean up the above code and move the repeated code into processFie (which now returns a function that is pased to &lt;code&gt;readFile&lt;/code&gt;):
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;perf-async-2&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;perf-async-2&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+const fs = require(&#39;fs&#39;);
+prepFiles();
+
+fs.readFile(&#39;./a.txt&#39;, &#39;utf8&#39;, processFile(&#39;a.txt&#39;));
+fs.readFile(&#39;./b.txt&#39;, &#39;utf8&#39;, processFile(&#39;b.txt&#39;));
+
+
+function processFile(fname) {
+  return (err, str) =&gt; {
+    fs.writeFileSync(`/tmp/${fname}`, str);
+    console.log(`DONE writing /tmp/${fname}`);
+  };
+}
+
+function prepFiles() {
+	// our examples read these two files, let&#39;s make sure that they exist on the runkit machine
+  fs.writeFileSync(&#39;./a.txt&#39;, &#39;alice!&#39;);
+  fs.writeFileSync(&#39;./b.txt&#39;, &#39;bob!&#39;);
+}
+
+&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Indeed, we can go a step further and remove other redudent code:&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;perf-async-3&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;perf-async-3&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+const fs = require(&#39;fs&#39;);
+
+prepFiles();
+
+readAndProcessFile(&#39;a.txt&#39;);
+readAndProcessFile(&#39;b.txt&#39;);
+
+function readAndProcessFile(name) {
+  return fs.readFile(`./${name}`, &#39;utf8&#39;, processFile(name));
+}
+
+function processFile(fname) {
+  return (err, str) =&gt; {
+    fs.writeFileSync(`/tmp/${fname}`, str);
+    console.log(`DONE writing /tmp/${fname}`);
+  };
+}
+
+function prepFiles() {
+	// our examples read these two files, let&#39;s make sure that they exist on the runkit machine
+  fs.writeFileSync(&#39;./a.txt&#39;, &#39;alice!&#39;);
+  fs.writeFileSync(&#39;./b.txt&#39;, &#39;bob!&#39;);
+}
+
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;high-order-functions-and-closures&#34;&gt;High order functions and closures:&lt;/h2&gt;
+
+&lt;p&gt;With first-class functions, we can write clean, declarative (functional) code.
+We don&amp;rsquo;t have to write code that tells the computer what to do, but rather have
+the code more closely resemble what we mean (mathematically). For example, we
+can process lists as such:&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;expressive&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;expressive&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+const list = [1, 2, 3, 4];
+
+console.log(filter(list, function (el) { 
+  return el &gt; 2;
+})); // ??
+
+console.log(map(list, el =&gt; { 
+  return el + 42;
+})); // ??
+
+
+function filter(list, pred) {
+  const dup = [];
+  for (let i = 0; i &lt; list.length; i++) {
+    if (pred(list[i])) {
+      dup.push(list[i]);
+    }
+  }
+  return dup;
+}
+
+function map(list, f) {
+  const dup = [];
+  for (let i = list.length-1; i &gt;= 0; i--) {
+    dup.unshift(f(list[i]));
+  }
+  return dup;
+}
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Since functions are first-class, we can even define function composition - a
+high-order function that takes functions as arguments and returns their
+composition. This is for example, useful if we want to apply several functions
+over each element of a list:&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;hof&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;hof&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+const list = [1, 2, 3, 4];
+
+const add42 = (el) =&gt; {
+  return el + 42;
+};
+
+const mul1337 = (el) =&gt; {
+  return el * 1337;
+};
+
+console.log(map(map(list, add42), mul1337));
+console.log(map(list, compose(mul1337, add42)));
+
+function compose(f, g) {
+  return (x) =&gt; {
+    return f(g(x));
+  };
+}
+
+function map(list, f) {
+  const dup = [];
+  for (let i = list.length-1; i &gt;= 0; i--) {
+    dup.unshift(f(list[i]));
+  }
+  return dup;
+}
+
+&lt;/div&gt;
+
+
+&lt;p&gt;It&amp;rsquo;s important to understand that JavaScript functions are &lt;strong&gt;not&lt;/strong&gt; just function-pointers. They are closures. That is, a pair encoding the function code and the enclosing environment:&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;closure&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;closure&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+/* recall our definition:
+const add42 = (el) =&gt; {
+  return el + 42;
+};
+*/
+
+function makeAddFunc(offset) {
+  return (x) =&gt; {
+    return offset + x; // note offset is captured here
+  };
+}
+
+const add42 = makeAddFunc(42);
+const sub42 = makeAddFunc(-42);
+
+console.log(add42(1)); // ??
+console.log(add42(42)); // ??
+
+console.log(sub42(1)); // ??
+console.log(sub42(42)); // ??
+
+
+// Note the environment:
+
+function f(x) {
+  let y = x;
+  return function (z) {
+    y += z;
+    return y;
+  };
+}
+
+const h = f(5);
+console.log(h(3)); // ??
+
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;using-functions-to-implement-modules&#34;&gt;Using functions to implement modules:&lt;/h2&gt;
+
+&lt;p&gt;First-class functions are incredibly powerful. We can even use them to
+implement modules. For example, below we define a simple module &lt;code&gt;myModule&lt;/code&gt;, which like Node.js modules contains an &lt;code&gt;exports&lt;/code&gt; object in scope that is, in turn, used to define the module interface.  This module is loaded by calling &lt;code&gt;requireMyModule&lt;/code&gt;.&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;module&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;module&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+// using our fake require:
+{
+  const mod = requireMyModule();
+
+  console.log(mod.myVar); // ??
+  mod.myFunc(&#34;what?&#34;); // ??
+  mod.myFunc(&#34;cse130 is fun!&#34;); // ??
+}
+
+function myModule(exports) {
+  const secret = &#34;cse130 is fun!&#34;;
+  exports.myVar = 42;
+  exports.myFunc = function (x) {
+    if (x === secret) {
+      console.log(&#39;yes!&#39;);
+    } else {
+      console.log(&#39;guess again!&#39;);
+    }
+  };
+}
+
+function requireMyModule() {
+  // create new object that will be populated by the module
+  const exports = {};
+  myModule(exports);
+  return exports;
+}
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Node modules are slightly more complicated, but not that much more! They
+basically take the contents of a file, wrap it as if the module was a function
+(with &lt;code&gt;&amp;quot;function (exports ) {&amp;quot;&lt;/code&gt; et.c) and then &lt;code&gt;eval&lt;/code&gt; it!&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Intro and JavaScript</title>
-      <link>https://cse130.programming.systems/notes/intro-js/</link>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js/</link>
       <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
       <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
-      <guid>https://cse130.programming.systems/notes/intro-js/</guid>
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js/</guid>
       <description>
 
 &lt;h3 id=&#34;lecture-slides-and-code&#34;&gt;Lecture slides and code&lt;/h3&gt;
@@ -107,10 +496,10 @@ filesystem reads:&lt;/p&gt;
     
     <item>
       <title>Course organization and policies</title>
-      <link>https://cse130.programming.systems/about/</link>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/about/</link>
       <pubDate>Mon, 05 Sep 2016 20:19:41 -0700</pubDate>
       <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
-      <guid>https://cse130.programming.systems/about/</guid>
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/about/</guid>
       <description>
 
 &lt;p&gt;The course consists of lectures, written homeworks, and programming
@@ -200,11 +589,11 @@ seriously and will be enforced.&lt;/p&gt;
     
     <item>
       <title>Syllabus</title>
-      <link>https://cse130.programming.systems/syllabus/</link>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/syllabus/</link>
       <pubDate>Mon, 05 Sep 2016 20:19:41 -0700</pubDate>
       <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
-      <guid>https://cse130.programming.systems/syllabus/</guid>
-      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cse130.programming.systems/css/bootstrap-table.css&#34;&gt;
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/syllabus/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/bootstrap-table.css&#34;&gt;
 
 &lt;table class=&#34;table table-hover&#34;&gt;
   &lt;thead&gt;
@@ -338,10 +727,10 @@ Please note that this syllabus is subject to change.
     
     <item>
       <title>CSE 130</title>
-      <link>https://cse130.programming.systems/index.html</link>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/index.html</link>
       <pubDate>Tue, 23 Aug 2016 01:59:45 -0700</pubDate>
       <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
-      <guid>https://cse130.programming.systems/index.html</guid>
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/index.html</guid>
       <description>
 
 &lt;p&gt;This course will cover basic concepts and design trade-offs related to
@@ -404,10 +793,10 @@ href=&#34;http://cseweb.ucsd.edu/~hovav/&#34;&gt;Hovav Shacham&lt;/a&gt;.&lt;/p&
     
     <item>
       <title>Contact information</title>
-      <link>https://cse130.programming.systems/contact/</link>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/contact/</link>
       <pubDate>Tue, 23 Aug 2016 01:59:45 -0700</pubDate>
       <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
-      <guid>https://cse130.programming.systems/contact/</guid>
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/contact/</guid>
       <description>
 
 &lt;p&gt;For general information and questions, please post to the class

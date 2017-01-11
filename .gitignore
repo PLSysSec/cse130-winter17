@@ -1,3 +1,4 @@
 /public/categories
 /public/tags
 .DS_Store
+*.bak
