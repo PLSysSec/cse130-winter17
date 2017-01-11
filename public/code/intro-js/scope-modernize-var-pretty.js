@@ -1,4 +1,3 @@
-var x = 43;
 function hello(x) {
   console.log(`A: x = ${x}`); // ??
   (() => {
