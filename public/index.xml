@@ -8,8 +8,109 @@
     <language>en-us</language>
     <managingEditor>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</managingEditor>
     <webMaster>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</webMaster>
-    <lastBuildDate>Wed, 11 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>JavaScript No-Nos</title>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-3/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-3/</guid>
+      <description>
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/default.min.css&#34;&gt;
+&lt;script src=&#34;https://cseweb.ucsd.edu/~dstefan/cse130-winter17/js/highlight.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Below are code snippets that illustrate some of the flexible features of
+JavaScript and how they can introduce unexpected/unintuitive behavior.  There
+are many more; see Appendix B of Crockford&amp;rsquo;s &lt;em&gt;JavaScript: The Good Parts&lt;/em&gt;.
+Please note that there are useful, positive side of most of these; every
+language design/implementation decision is a trade-off.&lt;/p&gt;
+
+&lt;h3 id=&#34;automatic-semicolon-insertion&#34;&gt;Automatic semicolon insertion&lt;/h3&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;auto-semi&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;auto-semi&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+function f() {
+  return 3;
+}
+function g() {
+  return
+  3;
+}
+console.log(f()); // ??
+console.log(g()); // ??
+
+&lt;/div&gt;
+
+
+&lt;h3 id=&#34;eval&#34;&gt;Eval&lt;/h3&gt;
+
+&lt;p&gt;JavaScript&amp;rsquo;s &lt;code&gt;eval&lt;/code&gt; function can be used load and execute new code, at runtime.
+This is generally considered a bad/dangerous idea, but nevertheless useful in
+some cases. Beyond security implications (mostly a concern in the browser since
+eval can easily be leverage to carry out &lt;a href=&#34;https://en.wikipedia.org/wiki/Cross-site_scripting&#34;&gt;XSS
+attacks&lt;/a&gt;, however, the
+behavior of eval differs when you call it directly or indirectly. This
+difference was introduced in the name of performance. (Arguably okay since you
+should not be using eval very much, but not great.)&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;nono-eval&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;nono-eval&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+global.x = 33;
+{
+  const x = 44;
+  const ev = eval;
+  console.log(eval(&#34;x&#34;)); // ??
+  console.log(ev(&#34;x&#34;)); // ??
+}
+
+&lt;/div&gt;
+
+
+&lt;h3 id=&#34;implicit-casting&#34;&gt;Implicit casting&lt;/h3&gt;
+
+&lt;p&gt;See the sarcastic &lt;a href=&#34;https://www.destroyallsoftware.com/talks/wat&#34;&gt;WAT&lt;/a&gt; video.&lt;/p&gt;
+
+&lt;h3 id=&#34;monkeypatching&#34;&gt;Monkeypatching&lt;/h3&gt;
+
+&lt;p&gt;Because JavaScript lets you modify arbitrary objects and their prototypes,
+running untrusted code safely is extremely difficult to do. (If you&amp;rsquo;re
+interested in this, come talk to me; this is some of my research.)
+See the examples
+&lt;a href=&#34;https://github.com/google/caja/wiki/GlobalObjectPoisoning&#34;&gt;here&lt;/a&gt; on global
+object poisoning. Here is the simplest:&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;poisoning&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;poisoning&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+// suppose add was exposed by a third-party library
+function add(x, y) {
+  // Poison the Object prototype by redefining toString,
+  // which is called when objects are implicitly casted to
+  // strings. The modified function modifies the object (this), by
+  // setting name to &#39;mud&#39;;
+  Object.prototype.toString = function () {
+    var name = this.name ;
+    this.name = &#39;mud&#39;;
+    return &#39;HA &#39; + name + &#39;.  IM STEALIN UR CODEZ!&#39;;
+  };
+  return x + y;
+}
+
+var o = { name: &#39;Bingo&#39; };
+console.log(add(3,4)); // calling add poisoned Object.prototype
+console.log(&#39;&#39; + o);
+console.log(&#39;Your name is now &#39; + o.name);
+
+&lt;/div&gt;
+
+</description>
+    </item>
     
     <item>
       <title>The power of JavaScript first-class functions</title>
@@ -531,6 +632,8 @@ console.log(t.toColorString()); // ??
 
 &lt;/div&gt;
 &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;../intro-js-code-3&#34;&gt;Continue with bad consequences of flexible design&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -753,7 +856,7 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 11&lt;/th&gt;
     &lt;td&gt;
       JavaScript crash course (cont)
-      &lt;br/&gt;[ &lt;a href=&#34;../slides/js-nutshell-cont.pdf&#34;&gt;JavaScript (cont) slides&lt;/a&gt; | &lt;a href=&#34;../notes/intro-js-code-2&#34;&gt;obj code&lt;/a&gt;]
+      &lt;br/&gt;[ &lt;a href=&#34;../slides/js-nutshell-cont.pdf&#34;&gt;JavaScript (cont) slides&lt;/a&gt; | &lt;a href=&#34;../notes/intro-js-code-2&#34;&gt;obj code&lt;/a&gt; | &lt;a href=&#34;../notes/intro-js-code-2&#34;&gt;nono code&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 16&lt;/th&gt;

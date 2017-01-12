@@ -31,7 +31,16 @@ console.log(g()); // ??
 
 ### Eval
 
-{{< runkit eval >}}
+JavaScript's `eval` function can be used load and execute new code, at runtime.
+This is generally considered a bad/dangerous idea, but nevertheless useful in
+some cases. Beyond security implications (mostly a concern in the browser since
+eval can easily be leverage to carry out [XSS
+attacks](https://en.wikipedia.org/wiki/Cross-site_scripting), however, the
+behavior of eval differs when you call it directly or indirectly. This
+difference was introduced in the name of performance. (Arguably okay since you
+should not be using eval very much, but not great.)
+
+{{< runkit nono-eval >}}
 global.x = 33;
 {
   const x = 44;
@@ -53,36 +62,25 @@ running untrusted code safely is extremely difficult to do. (If you're
 interested in this, come talk to me; this is some of my research.)
 See the examples
 [here](https://github.com/google/caja/wiki/GlobalObjectPoisoning) on global
-object poisoning.
+object poisoning. Here is the simplest:
 
 {{< runkit poisoning >}}
-// suppose this API is expose by someone not completely trustworthy
+// suppose add was exposed by a third-party library
 function add(x, y) {
-  if (!('stolenGoods' in global)) {
-    // define new property on global object, if we haven't already
-    global.stolenGoods = [];
-    // copy the original toString
-    const originalToString = Object.prototype.toString;
-    // redefine it as to steal data when code calls toString
-    Object.prototype.toString = function () {
-      // call the original toString
-      const res = originalToString.apply(this, arguments);
-      stolenGoods.push(JSON.stringify(this));
-    };
-  }
+  // Poison the Object prototype by redefining toString,
+  // which is called when objects are implicitly casted to
+  // strings. The modified function modifies the object (this), by
+  // setting name to 'mud';
+  Object.prototype.toString = function () {
+    var name = this.name ;
+    this.name = 'mud';
+    return 'HA ' + name + '.  IM STEALIN UR CODEZ!';
+  };
   return x + y;
 }
 
-const obj = {
-  secret: 'aliceIsSuperCool',
-  x: 1337
-};
-
-console.log(obj);
-add(3, 4); // we've been poisoned
-
-console.log(obj); // calls toString implicitly
-console.log({ otherSecret: 'cse130 is fun' });
-
-console.log(`stolen stuff: ${global.stolenGoods}`); // ??
+var o = { name: 'Bingo' };
+console.log(add(3,4)); // calling add poisoned Object.prototype
+console.log('' + o);
+console.log('Your name is now ' + o.name);
 {{< /runkit >}}

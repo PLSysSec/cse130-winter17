@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Syllabus  &middot; CSE 130</title>
+  <title>JavaScript No-Nos  &middot; CSE 130</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -17,16 +17,16 @@
 <meta name="keywords" content="">
 
 
-<meta property="og:title" content="Syllabus  &middot; CSE 130 ">
+<meta property="og:title" content="JavaScript No-Nos  &middot; CSE 130 ">
 <meta property="og:site_name" content="CSE 130"/>
-<meta property="og:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/syllabus/" />
+<meta property="og:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-3/" />
 <meta property="og:locale" content="en-us">
 
 
 <meta property="og:type" content="article" />
 <meta property="og:description" content="description"/>
-<meta property="og:article:published_time" content="2016-09-05T20:19:41-07:00" />
-<meta property="og:article:modified_time" content="2016-09-05T20:19:41-07:00" />
+<meta property="og:article:published_time" content="2017-01-12T00:00:00Z" />
+<meta property="og:article:modified_time" content="2017-01-12T00:00:00Z" />
 
   
 
@@ -34,9 +34,9 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@deiandelmars" />
 <meta name="twitter:creator" content="@deiandelmars" />
-<meta name="twitter:title" content="Syllabus" />
+<meta name="twitter:title" content="JavaScript No-Nos" />
 <meta name="twitter:description" content="description" />
-<meta name="twitter:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/syllabus/" />
+<meta name="twitter:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-3/" />
 <meta name="twitter:domain" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17">
   
 
@@ -44,20 +44,20 @@
   {
     "@context": "http://schema.org",
     "@type": "Article",
-    "headline": "Syllabus",
+    "headline": "JavaScript No-Nos",
     "author": {
       "@type": "Person",
       "name": "http://profiles.google.com/+?rel=author"
     },
-    "datePublished": "2016-09-05",
+    "datePublished": "2017-01-12",
     "description": "description",
-    "wordCount":  179 
+    "wordCount":  328 
   }
 </script>
 
 
 
-<link rel="canonical" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/syllabus/" />
+<link rel="canonical" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-3/" />
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/touch-icon-144-precomposed.png">
 <link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/favicon.png" rel="icon">
@@ -158,142 +158,104 @@
 
 <article id="main-content" class="container main_content single">
   <header class="container hat">
-  <h1>Syllabus
+  <h1>JavaScript No-Nos
 </h1>
 
 </header>
 
   <div class="container content">
-  <link rel="stylesheet" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/bootstrap-table.css">
+  
 
-<table class="table table-hover">
-  <thead>
-  <tr>
-    <th>Date</th>
-    <th>Topic and readings</th>
-  </tr>
-  </thead>
-  <tr>
-    <td colspan="3" class="topic">Functions</td>
-  </tr>
-  <tr class="warning"> <th class="date">Jan 09</th>
-    <td>
-      Intro and JavaScript crash course
-      <br/>[ <a href="../notes/intro-js">notes</a> | <a href="../slides/intro.pdf">intro slides</a> | <a href="../slides/js-nutshell.pdf">JavaScript slides</a> | <a href="../notes/intro-js-code">function code</a> ]
-    </td>
-  </tr>
-  <tr> <th class="date">Jan 11</th>
-    <td>
-      JavaScript crash course (cont)
-      <br/>[ <a href="../slides/js-nutshell-cont.pdf">JavaScript (cont) slides</a> | <a href="../notes/intro-js-code-2">obj code</a> | <a href="../notes/intro-js-code-2">nono code</a>]
-    </td>
-  </tr>
-  <tr class="info"> <th class="date">Jan 16</th>
-    <td> <a href="https://en.wikipedia.org/wiki/Martin_Luther_King_Jr.">MLK</a>- no class</td>
-  </tr>
-  <tr> <th class="date">Jan 18</th>
-    <td>
-      Foundations and the lambda calculus
-      <br/>[ readings: 4.1.2, 4.2, <a href="http://www.cse.chalmers.se/research/group/logic/TypesSS05/Extra/geuvers.pdf">optional additional material</a> ]
-    </td>
-  </tr>
-  <tr class="warning"> <th class="date">Jan 23</th>
-    <td>
-      Scope, storage management, and function implementation
-    </td>
-  </tr>
-  <tr>
-    <td colspan="3" class="topic">Types</td>
-  </tr>
-  <tr> <th class="date">Jan 25</th>
-    <td>
-      Haskell crash course
-    </td>
-  </tr>
-  <tr class="warning"> <th class="date">Jan 30</th>
-    <td>
-      Types, type systems, and ADTs
-    </td>
-  </tr>
-  <tr> <th class="date">Feb 01</th>
-    <td>
-      Type polymorphism and type inference
-    </td>
-  </tr>
-  <tr class="warning"> <th class="date">Feb 06</th>
-    <td>
-      Type classes and type traits
-    </td>
-  </tr>
-  <tr>
-    <td colspan="3" class="topic">Side-effects and control structures</td>
-  </tr>
-  <tr> <th class="date">Feb 08</th>
-    <td>
-      Side-effects and the IO monad
-    </td>
-  </tr>
-  <tr class="warning"> <th class="date">Feb 13</th>
-    <td>
-      Exceptions and error recovery
-    </td>
-  </tr>
-  <tr> <th class="date">Feb 15</th>
-    <td>
-      Continuations
-    </td>
-  </tr>
-  <tr class="info"> <th class="date">Feb 20</th>
-    <td> President's day - no class</td>
-  </tr>
-  <tr class="info"> <th class="date">Feb 22</th>
-    <td> Midterm exam </td>
-  </tr>
-  <tr>
-    <td colspan="3" class="topic">Objects and program organization</td>
-  </tr>
-  <tr class="warning"> <th class="date">Feb 27</th>
-    <td>
-      Objects, encapsulation, and dynamic dispatch
-    </td>
-  </tr>
-  <tr> <th class="date">Mar 01</th>
-    <td>
-      Subtyping and inheritance
-    </td>
-  </tr>
-  <tr class="warning"> <th class="date">Mar 06</th>
-    <td>
-      Memory management and garbage collection
-    </td>
-  </tr>
-  <tr>
-    <td colspan="3" class="topic">Cross-cutting concerns</td>
-  </tr>
-  <tr> <th class="date">Mar 08</th>
-    <td>
-      Modularity and module systems
-    </td>
-  </tr>
-  <tr class="warning"> <th class="date">Mar 13</th>
-    <td>
-      Memory models and concurrency
-    </td>
-  </tr>
-  <tr> <th class="date">Mar 15</th>
-    <td>
-      STM
-    </td>
-  </tr>
-  <tr class="info">
-    <th class="date">Mar 22</th>
-    <td>Final exam</td>
-  </tr>
-</table>
+<link rel="stylesheet" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/default.min.css">
+<script src="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/js/highlight.min.js"></script>
 
-<p>
-Please note that this syllabus is subject to change.
-</p>
+
+<p>Below are code snippets that illustrate some of the flexible features of
+JavaScript and how they can introduce unexpected/unintuitive behavior.  There
+are many more; see Appendix B of Crockford&rsquo;s <em>JavaScript: The Good Parts</em>.
+Please note that there are useful, positive side of most of these; every
+language design/implementation decision is a trade-off.</p>
+
+<h3 id="automatic-semicolon-insertion">Automatic semicolon insertion</h3>
+
+<script src="https://embed.runkit.com" data-element-id="auto-semi"></script>
+<div id="auto-semi" nodeVersion="6.9.2">
+  
+function f() {
+  return 3;
+}
+function g() {
+  return
+  3;
+}
+console.log(f()); // ??
+console.log(g()); // ??
+
+</div>
+
+
+<h3 id="eval">Eval</h3>
+
+<p>JavaScript&rsquo;s <code>eval</code> function can be used load and execute new code, at runtime.
+This is generally considered a bad/dangerous idea, but nevertheless useful in
+some cases. Beyond security implications (mostly a concern in the browser since
+eval can easily be leverage to carry out <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">XSS
+attacks</a>, however, the
+behavior of eval differs when you call it directly or indirectly. This
+difference was introduced in the name of performance. (Arguably okay since you
+should not be using eval very much, but not great.)</p>
+
+<script src="https://embed.runkit.com" data-element-id="nono-eval"></script>
+<div id="nono-eval" nodeVersion="6.9.2">
+  
+global.x = 33;
+{
+  const x = 44;
+  const ev = eval;
+  console.log(eval("x")); // ??
+  console.log(ev("x")); // ??
+}
+
+</div>
+
+
+<h3 id="implicit-casting">Implicit casting</h3>
+
+<p>See the sarcastic <a href="https://www.destroyallsoftware.com/talks/wat">WAT</a> video.</p>
+
+<h3 id="monkeypatching">Monkeypatching</h3>
+
+<p>Because JavaScript lets you modify arbitrary objects and their prototypes,
+running untrusted code safely is extremely difficult to do. (If you&rsquo;re
+interested in this, come talk to me; this is some of my research.)
+See the examples
+<a href="https://github.com/google/caja/wiki/GlobalObjectPoisoning">here</a> on global
+object poisoning. Here is the simplest:</p>
+
+<script src="https://embed.runkit.com" data-element-id="poisoning"></script>
+<div id="poisoning" nodeVersion="6.9.2">
+  
+// suppose add was exposed by a third-party library
+function add(x, y) {
+  // Poison the Object prototype by redefining toString,
+  // which is called when objects are implicitly casted to
+  // strings. The modified function modifies the object (this), by
+  // setting name to 'mud';
+  Object.prototype.toString = function () {
+    var name = this.name ;
+    this.name = 'mud';
+    return 'HA ' + name + '.  IM STEALIN UR CODEZ!';
+  };
+  return x + y;
+}
+
+var o = { name: 'Bingo' };
+console.log(add(3,4)); // calling add poisoned Object.prototype
+console.log('' + o);
+console.log('Your name is now ' + o.name);
+
+</div>
+
 
 </div>
 

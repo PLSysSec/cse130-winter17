@@ -80,3 +80,5 @@ Car.prototype.toColorString = function () {
 console.log(f.toColorString()); // ??
 console.log(t.toColorString()); // ??
 {{< /runkit >}}
+
+**[Continue with bad consequences of flexible design](../intro-js-code-3)**.
