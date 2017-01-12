@@ -35,7 +35,7 @@ JavaScript's `eval` function can be used load and execute new code, at runtime.
 This is generally considered a bad/dangerous idea, but nevertheless useful in
 some cases. Beyond security implications (mostly a concern in the browser since
 eval can easily be leverage to carry out [XSS
-attacks](https://en.wikipedia.org/wiki/Cross-site_scripting), however, the
+attacks](https://en.wikipedia.org/wiki/Cross-site_scripting)), however, the
 behavior of eval differs when you call it directly or indirectly. This
 difference was introduced in the name of performance. (Arguably okay since you
 should not be using eval very much, but not great.)
