@@ -8,13 +8,13 @@
     <language>en-us</language>
     <managingEditor>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</managingEditor>
     <webMaster>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</webMaster>
-    <lastBuildDate>Mon, 09 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The power of JavaScript first-class functions</title>
       <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code/</link>
-      <pubDate>Mon, 09 Jan 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 11 Jan 2017 00:00:00 +0000</pubDate>
       <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
       <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code/</guid>
       <description>
@@ -66,7 +66,7 @@ hello(42);
 &lt;/div&gt;
 
 
-&lt;p&gt;We can, however, introdue block scoping to code that only uses &lt;code&gt;var&lt;/code&gt;
+&lt;p&gt;We can, however, introduce block scoping to code that only uses &lt;code&gt;var&lt;/code&gt;
 declarations by using first-class functions to create a new function scope:&lt;/p&gt;
 
 &lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;scope-modernize-var&#34;&gt;&lt;/script&gt;
@@ -105,6 +105,37 @@ function hello(x) {
 }
 
 hello(42);
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Fat arrows or &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions&#34;&gt;arrow
+functions&lt;/a&gt;
+can make our code much cleaner and using them will make the lambda calculus
+lecture much easier too. Below is some code showing the use of fat arrows and
+how more syntax goes away as our functions get simpler:&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;fat-arrows&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;fat-arrows&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+const f = (x) =&gt; { 
+  console.log(&#39;hello!&#39;);
+  return x;
+};
+
+f(34); // ??
+
+// if your function is simple, and only has one expression, can write it as:
+const g = (x) =&gt;  x ;
+// no more {}&#39; and &#34;return&#34;!
+console.log(g(33));
+
+// In fact, if function only has 1 argument, you can even remove the ()&#39;s:
+const h = x =&gt;  x+3;
+console.log(h(33)); // ??
+
+// We can also use it immediately, inline:
+console.log(((x, y) =&gt; x + y) (4, 5)) ; // ??
 
 &lt;/div&gt;
 
@@ -406,6 +437,100 @@ function requireMyModule() {
 &lt;p&gt;Node modules are slightly more complicated, but not that much more! They
 basically take the contents of a file, wrap it as if the module was a function
 (with &lt;code&gt;&amp;quot;function (exports ) {&amp;quot;&lt;/code&gt; et.c) and then &lt;code&gt;eval&lt;/code&gt; it!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;../intro-js-code-2&#34;&gt;Continue with objects here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JavaScript objects</title>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-2/</link>
+      <pubDate>Mon, 09 Jan 2017 00:00:00 +0000</pubDate>
+      <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-2/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/default.min.css&#34;&gt;
+&lt;script src=&#34;https://cseweb.ucsd.edu/~dstefan/cse130-winter17/js/highlight.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Below is the code snippet illustrating simple JavaScript objects, created using
+the object literal notation:&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;receiver&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;receiver&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+const obj = {
+  &#34;x-w00t&#34;: 10,
+  x: 1337,
+  f: function (y) {
+    this.x++;
+    return this.x + y;
+  }
+};
+
+console.log(obj.x); // ??
+console.log(obj.f(3)); // ??
+console.log(obj[&#34;x&#34;]); // ??
+console.log(obj[&#34;x-w00t&#34;]) // ??
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Classes are sometimes appropriate, however. For example, they let you define
+what every object instance of the class should look like. They also let you
+define a single method that is &lt;strong&gt;reused&lt;/strong&gt; by every object instance. This can be
+done in modern JavaScript. Below is a code snippet showing the older style of
+using functions, however, to accomplish similar goals. This yet-again
+demonstrate the power of JavaScript&amp;rsquo;s function (and objects-everywhere) design:&lt;/p&gt;
+
+&lt;p&gt;&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;class&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;class&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+function Car(make, model) {
+  this.make = make;
+  this.model = model;
+  this.toString = function () {
+    return `${this.make}@${this.model}`;
+  };
+}
+Car.mySweetProp = 42;
+
+const f = new Car(&#34;Ford&#34;, &#34;Focus&#34;);
+console.log(f.toString());
+const t = new Car(&#34;Toyota&#34;, &#34;Corola&#34;);
+console.log(t.toString());
+
+// Car.prototype is shared by all objects created by calling new Car(...)
+// That&#39;s right you can treat functions like objects!
+
+console.log(f.__proto__ === Car.prototype); // ??
+
+// Let&#39;s define property common to all cars:
+Car.prototype.color = &#34;black&#34;;
+
+console.log(f.color); // ??
+// getProperty &#34;color&#34; of f
+//     if it has it, return it
+//     else getProperty &#34;color&#34; of f.__proto__
+console.log(t.color); // ??
+
+// Can override the default color that is defined on the prototype:
+
+t.color = &#34;red&#34;;
+
+console.log(t.color); // ??
+console.log(f.color); // ??
+
+// We can define a method on the prototype:
+
+Car.prototype.toColorString = function () {
+  return `${this.make}, ${this.model}, ${this.color}`;
+};
+
+console.log(f.toColorString()); // ??
+console.log(t.toColorString()); // ??
+
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
@@ -419,8 +544,9 @@ basically take the contents of a file, wrap it as if the module was a function
 
 &lt;h3 id=&#34;lecture-slides-and-code&#34;&gt;Lecture slides and code&lt;/h3&gt;
 
-&lt;p&gt;You can get the slides &lt;a href=&#34;../../slides/js-nutshell.pdf&#34;&gt;here&lt;/a&gt;. The
-slides refer to some JavaScript files, provided below. You can also play with this code in your browser &lt;a href=&#34;../intro-js-code&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can get the slides &lt;a href=&#34;../../slides/js-nutshell.pdf&#34;&gt;here&lt;/a&gt;. The slides refer
+to some JavaScript files, provided below. You can also play with this code in
+your browser &lt;a href=&#34;../intro-js-code&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;../intro-js-code-2&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;recommended-reading&#34;&gt;Recommended reading&lt;/h3&gt;
 
@@ -428,25 +554,32 @@ slides refer to some JavaScript files, provided below. You can also play with th
 yourself with the basics of the language, as most of the labs in this class
 will be in JavaScript.&lt;/p&gt;
 
-&lt;p&gt;We recommend the &lt;a
-href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide&#34;&gt;Mozilla
-Developer Network&amp;rsquo;s JavaScript Guide&lt;/a&gt;,
-but there are many other tutorials on the Internet.&lt;/p&gt;
+&lt;p&gt;We recommend the &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide&#34;&gt;Mozilla Developer Network&amp;rsquo;s JavaScript
+Guide&lt;/a&gt;, but
+there are many other tutorials on the Internet.&lt;/p&gt;
 
-&lt;p&gt;Dave Herman&amp;rsquo;s &lt;a href=&#34;http://effectivejs.com/&#34;&gt;Effective JavaScript&lt;/a&gt; is
-very good reference that covers a lot of the JavaScript intricacies.  You will
-not this for the class, but if you end up writing JavaScript code in the
-outside world, this book is must-read.&lt;/p&gt;
+&lt;p&gt;Dave Herman&amp;rsquo;s &lt;a href=&#34;http://effectivejs.com/&#34;&gt;Effective JavaScript&lt;/a&gt; is very good
+reference that covers a lot of the JavaScript intricacies.  You will not this
+for the class, but if you end up writing JavaScript code in the outside world,
+this book is must-read.&lt;/p&gt;
 
 &lt;h3 id=&#34;additional-resources-reading-for-the-curious&#34;&gt;Additional resources/reading for the curious&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://leanpub.com/understandinges6/read#leanpub-auto-block-bindings&#34;&gt;Block bindings&lt;/a&gt; and the difference between &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;let&lt;/code&gt;, and &lt;code&gt;const&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Why a language like JavaScript took over the world? Not that uncommon, see &lt;a href=&#34;https://www.jwz.org/doc/worse-is-better.html&#34;&gt;The Rise of &amp;ldquo;Worse is Better&amp;rdquo;&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures&#34;&gt;Closures&lt;/a&gt; explained; see, especially the creating closures in a loop section.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://leanpub.com/understandinges6/read#leanpub-auto-block-bindings&#34;&gt;Block
+bindings&lt;/a&gt;
+and the difference between &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;let&lt;/code&gt;, and &lt;code&gt;const&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Why a language like JavaScript took over the world? Not that uncommon, see
+&lt;a href=&#34;https://www.jwz.org/doc/worse-is-better.html&#34;&gt;The Rise of &amp;ldquo;Worse is
+Better&amp;rdquo;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures&#34;&gt;Closures&lt;/a&gt;
+explained; see, especially the creating closures in a loop section.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://curiosity-driven.org/private-properties-in-javascript&#34;&gt;Private properties in (modern) JavaScript&lt;/a&gt;; we will revisit the idea of private properties (encapsulation) later in the course.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management&#34;&gt;Short intro to memory management for JavaScript&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hacks.mozilla.org/category/es6-in-depth/&#34;&gt;ES6 In Depth Articles&lt;/a&gt; contains more information on the more recent features introduced to JavaScript.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management&#34;&gt;Short intro to memory management for
+JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hacks.mozilla.org/category/es6-in-depth/&#34;&gt;ES6 In Depth&lt;/a&gt; contains
+more information on the more recent features introduced to JavaScript.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions&#34;&gt;Arrow functions&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;source-files-we-used-in-class&#34;&gt;Source files we used in class&lt;/h3&gt;
@@ -483,6 +616,12 @@ filesystem reads:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;../../code/intro-js/module-node.js&#34;&gt;module-node.js&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;../../code/intro-js/module.js&#34;&gt;module.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Code illustrating the use of arrow function syntax for function expressions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../../code/intro-js/fat-arrows.js&#34;&gt;fat-arrows.js&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Code illustrating simple methods and constructors for JavaScript:&lt;/p&gt;
@@ -608,13 +747,13 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 09&lt;/th&gt;
     &lt;td&gt;
       Intro and JavaScript crash course
-      &lt;br/&gt;[ &lt;a href=&#34;../notes/intro-js&#34;&gt;notes&lt;/a&gt; | &lt;a href=&#34;../slides/intro.pdf&#34;&gt;intro slides&lt;/a&gt; | &lt;a href=&#34;../slides/js-nutshell.pdf&#34;&gt;JavaScript slides&lt;/a&gt; ]
+      &lt;br/&gt;[ &lt;a href=&#34;../notes/intro-js&#34;&gt;notes&lt;/a&gt; | &lt;a href=&#34;../slides/intro.pdf&#34;&gt;intro slides&lt;/a&gt; | &lt;a href=&#34;../slides/js-nutshell.pdf&#34;&gt;JavaScript slides&lt;/a&gt; | &lt;a href=&#34;../notes/intro-js-code&#34;&gt;function code&lt;/a&gt; ]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 11&lt;/th&gt;
     &lt;td&gt;
-      Foundations and the lambda calculus
-      &lt;br/&gt;[ readings: 4.1.2, 4.2, &lt;a href=&#34;http://www.cse.chalmers.se/research/group/logic/TypesSS05/Extra/geuvers.pdf&#34;&gt;additional material&lt;/a&gt; ]
+      JavaScript crash course (cont)
+      &lt;br/&gt;[ &lt;a href=&#34;../slides/js-nutshell-cont.pdf&#34;&gt;JavaScript (cont) slides&lt;/a&gt; | &lt;a href=&#34;../notes/intro-js-code-2&#34;&gt;obj code&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 16&lt;/th&gt;
@@ -622,28 +761,34 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 18&lt;/th&gt;
     &lt;td&gt;
+      Foundations and the lambda calculus
+      &lt;br/&gt;[ readings: 4.1.2, 4.2, &lt;a href=&#34;http://www.cse.chalmers.se/research/group/logic/TypesSS05/Extra/geuvers.pdf&#34;&gt;optional additional material&lt;/a&gt; ]
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 23&lt;/th&gt;
+    &lt;td&gt;
       Scope, storage management, and function implementation
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
     &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Types&lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 23&lt;/th&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 25&lt;/th&gt;
     &lt;td&gt;
       Haskell crash course
     &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 25&lt;/th&gt;
+  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 30&lt;/th&gt;
     &lt;td&gt;
       Types, type systems, and ADTs
     &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 30&lt;/th&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 01&lt;/th&gt;
     &lt;td&gt;
       Type polymorphism and type inference
     &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 01&lt;/th&gt;
+  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 06&lt;/th&gt;
     &lt;td&gt;
       Type classes and type traits
     &lt;/td&gt;
@@ -651,27 +796,19 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr&gt;
     &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Side-effects and control structures&lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 06&lt;/th&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 08&lt;/th&gt;
     &lt;td&gt;
       Side-effects and the IO monad
     &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 08&lt;/th&gt;
+  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 13&lt;/th&gt;
     &lt;td&gt;
       Exceptions and error recovery
     &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 13&lt;/th&gt;
-    &lt;td&gt;
-      Continuations
-    &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Objects and program organization&lt;/td&gt;
-  &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 15&lt;/th&gt;
     &lt;td&gt;
-      Objects, encapsulation, and dynamic dispatch
+      Continuations
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 20&lt;/th&gt;
@@ -680,19 +817,22 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 22&lt;/th&gt;
     &lt;td&gt; Midterm exam &lt;/td&gt;
   &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Objects and program organization&lt;/td&gt;
+  &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 27&lt;/th&gt;
     &lt;td&gt;
-      Subtyping and inheritance
+      Objects, encapsulation, and dynamic dispatch
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 01&lt;/th&gt;
     &lt;td&gt;
-      Memory management and garbage collection
+      Subtyping and inheritance
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Mar 06&lt;/th&gt;
     &lt;td&gt;
-      Modularity and module systems
+      Memory management and garbage collection
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
@@ -700,17 +840,17 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 08&lt;/th&gt;
     &lt;td&gt;
-      Memory models and concurrency
+      Modularity and module systems
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Mar 13&lt;/th&gt;
     &lt;td&gt;
-      STM
+      Memory models and concurrency
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 15&lt;/th&gt;
     &lt;td&gt;
-      Special topic/Invited talk
+      STM
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;info&#34;&gt;

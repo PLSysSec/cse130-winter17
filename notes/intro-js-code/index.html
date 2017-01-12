@@ -25,8 +25,8 @@
 
 <meta property="og:type" content="article" />
 <meta property="og:description" content="description"/>
-<meta property="og:article:published_time" content="2017-01-09T00:00:00Z" />
-<meta property="og:article:modified_time" content="2017-01-09T00:00:00Z" />
+<meta property="og:article:published_time" content="2017-01-11T00:00:00Z" />
+<meta property="og:article:modified_time" content="2017-01-11T00:00:00Z" />
 
   
 
@@ -49,9 +49,9 @@
       "@type": "Person",
       "name": "http://profiles.google.com/+?rel=author"
     },
-    "datePublished": "2017-01-09",
+    "datePublished": "2017-01-11",
     "description": "description",
-    "wordCount":  1194 
+    "wordCount":  1327 
   }
 </script>
 
@@ -213,7 +213,7 @@ hello(42);
 </div>
 
 
-<p>We can, however, introdue block scoping to code that only uses <code>var</code>
+<p>We can, however, introduce block scoping to code that only uses <code>var</code>
 declarations by using first-class functions to create a new function scope:</p>
 
 <script src="https://embed.runkit.com" data-element-id="scope-modernize-var"></script>
@@ -252,6 +252,37 @@ function hello(x) {
 }
 
 hello(42);
+
+</div>
+
+
+<p>Fat arrows or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow
+functions</a>
+can make our code much cleaner and using them will make the lambda calculus
+lecture much easier too. Below is some code showing the use of fat arrows and
+how more syntax goes away as our functions get simpler:</p>
+
+<script src="https://embed.runkit.com" data-element-id="fat-arrows"></script>
+<div id="fat-arrows" nodeVersion="6.9.2">
+  
+const f = (x) => { 
+  console.log('hello!');
+  return x;
+};
+
+f(34); // ??
+
+// if your function is simple, and only has one expression, can write it as:
+const g = (x) =>  x ;
+// no more {}' and "return"!
+console.log(g(33));
+
+// In fact, if function only has 1 argument, you can even remove the ()'s:
+const h = x =>  x+3;
+console.log(h(33)); // ??
+
+// We can also use it immediately, inline:
+console.log(((x, y) => x + y) (4, 5)) ; // ??
 
 </div>
 
@@ -553,6 +584,8 @@ function requireMyModule() {
 <p>Node modules are slightly more complicated, but not that much more! They
 basically take the contents of a file, wrap it as if the module was a function
 (with <code>&quot;function (exports ) {&quot;</code> et.c) and then <code>eval</code> it!</p>
+
+<p><strong><a href="../intro-js-code-2">Continue with objects here</a></strong>.</p>
 
 </div>
 

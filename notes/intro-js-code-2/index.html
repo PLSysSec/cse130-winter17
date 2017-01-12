@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Syllabus  &middot; CSE 130</title>
+  <title>JavaScript objects  &middot; CSE 130</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -17,16 +17,16 @@
 <meta name="keywords" content="">
 
 
-<meta property="og:title" content="Syllabus  &middot; CSE 130 ">
+<meta property="og:title" content="JavaScript objects  &middot; CSE 130 ">
 <meta property="og:site_name" content="CSE 130"/>
-<meta property="og:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/syllabus/" />
+<meta property="og:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-2/" />
 <meta property="og:locale" content="en-us">
 
 
 <meta property="og:type" content="article" />
 <meta property="og:description" content="description"/>
-<meta property="og:article:published_time" content="2016-09-05T20:19:41-07:00" />
-<meta property="og:article:modified_time" content="2016-09-05T20:19:41-07:00" />
+<meta property="og:article:published_time" content="2017-01-09T00:00:00Z" />
+<meta property="og:article:modified_time" content="2017-01-09T00:00:00Z" />
 
   
 
@@ -34,9 +34,9 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@deiandelmars" />
 <meta name="twitter:creator" content="@deiandelmars" />
-<meta name="twitter:title" content="Syllabus" />
+<meta name="twitter:title" content="JavaScript objects" />
 <meta name="twitter:description" content="description" />
-<meta name="twitter:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/syllabus/" />
+<meta name="twitter:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-2/" />
 <meta name="twitter:domain" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17">
   
 
@@ -44,20 +44,20 @@
   {
     "@context": "http://schema.org",
     "@type": "Article",
-    "headline": "Syllabus",
+    "headline": "JavaScript objects",
     "author": {
       "@type": "Person",
       "name": "http://profiles.google.com/+?rel=author"
     },
-    "datePublished": "2016-09-05",
+    "datePublished": "2017-01-09",
     "description": "description",
-    "wordCount":  176 
+    "wordCount":  260 
   }
 </script>
 
 
 
-<link rel="canonical" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/syllabus/" />
+<link rel="canonical" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-2/" />
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/touch-icon-144-precomposed.png">
 <link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/favicon.png" rel="icon">
@@ -158,141 +158,94 @@
 
 <article id="main-content" class="container main_content single">
   <header class="container hat">
-  <h1>Syllabus
+  <h1>JavaScript objects
 </h1>
 
 </header>
 
   <div class="container content">
-  <link rel="stylesheet" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/bootstrap-table.css">
+  <link rel="stylesheet" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/default.min.css">
+<script src="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/js/highlight.min.js"></script>
 
-<table class="table table-hover">
-  <thead>
-  <tr>
-    <th>Date</th>
-    <th>Topic and readings</th>
-  </tr>
-  </thead>
-  <tr>
-    <td colspan="3" class="topic">Functions</td>
-  </tr>
-  <tr class="warning"> <th class="date">Jan 09</th>
-    <td>
-      Intro and JavaScript crash course
-      <br/>[ <a href="../notes/intro-js">notes</a> | <a href="../slides/intro.pdf">intro slides</a> | <a href="../slides/js-nutshell.pdf">JavaScript slides</a> | <a href="../notes/intro-js-code">function code</a> ]
-    </td>
-  </tr>
-  <tr> <th class="date">Jan 11</th>
-    <td>
-      JavaScript crash course (cont)
-      <br/>[ <a href="../slides/js-nutshell-cont.pdf">JavaScript (cont) slides</a> | <a href="../notes/intro-js-code-2">obj code</a>]
-    </td>
-  </tr>
-  <tr class="info"> <th class="date">Jan 16</th>
-    <td> <a href="https://en.wikipedia.org/wiki/Martin_Luther_King_Jr.">MLK</a>- no class</td>
-  </tr>
-  <tr> <th class="date">Jan 18</th>
-    <td>
-      Foundations and the lambda calculus
-      <br/>[ readings: 4.1.2, 4.2, <a href="http://www.cse.chalmers.se/research/group/logic/TypesSS05/Extra/geuvers.pdf">optional additional material</a> ]
-    </td>
-  </tr>
-  <tr class="warning"> <th class="date">Jan 23</th>
-    <td>
-      Scope, storage management, and function implementation
-    </td>
-  </tr>
-  <tr>
-    <td colspan="3" class="topic">Types</td>
-  </tr>
-  <tr> <th class="date">Jan 25</th>
-    <td>
-      Haskell crash course
-    </td>
-  </tr>
-  <tr class="warning"> <th class="date">Jan 30</th>
-    <td>
-      Types, type systems, and ADTs
-    </td>
-  </tr>
-  <tr> <th class="date">Feb 01</th>
-    <td>
-      Type polymorphism and type inference
-    </td>
-  </tr>
-  <tr class="warning"> <th class="date">Feb 06</th>
-    <td>
-      Type classes and type traits
-    </td>
-  </tr>
-  <tr>
-    <td colspan="3" class="topic">Side-effects and control structures</td>
-  </tr>
-  <tr> <th class="date">Feb 08</th>
-    <td>
-      Side-effects and the IO monad
-    </td>
-  </tr>
-  <tr class="warning"> <th class="date">Feb 13</th>
-    <td>
-      Exceptions and error recovery
-    </td>
-  </tr>
-  <tr> <th class="date">Feb 15</th>
-    <td>
-      Continuations
-    </td>
-  </tr>
-  <tr class="info"> <th class="date">Feb 20</th>
-    <td> President's day - no class</td>
-  </tr>
-  <tr class="info"> <th class="date">Feb 22</th>
-    <td> Midterm exam </td>
-  </tr>
-  <tr>
-    <td colspan="3" class="topic">Objects and program organization</td>
-  </tr>
-  <tr class="warning"> <th class="date">Feb 27</th>
-    <td>
-      Objects, encapsulation, and dynamic dispatch
-    </td>
-  </tr>
-  <tr> <th class="date">Mar 01</th>
-    <td>
-      Subtyping and inheritance
-    </td>
-  </tr>
-  <tr class="warning"> <th class="date">Mar 06</th>
-    <td>
-      Memory management and garbage collection
-    </td>
-  </tr>
-  <tr>
-    <td colspan="3" class="topic">Cross-cutting concerns</td>
-  </tr>
-  <tr> <th class="date">Mar 08</th>
-    <td>
-      Modularity and module systems
-    </td>
-  </tr>
-  <tr class="warning"> <th class="date">Mar 13</th>
-    <td>
-      Memory models and concurrency
-    </td>
-  </tr>
-  <tr> <th class="date">Mar 15</th>
-    <td>
-      STM
-    </td>
-  </tr>
-  <tr class="info">
-    <th class="date">Mar 22</th>
-    <td>Final exam</td>
-  </tr>
-</table>
 
-<p>
-Please note that this syllabus is subject to change.
+<p>Below is the code snippet illustrating simple JavaScript objects, created using
+the object literal notation:</p>
+
+<script src="https://embed.runkit.com" data-element-id="receiver"></script>
+<div id="receiver" nodeVersion="6.9.2">
+  
+const obj = {
+  "x-w00t": 10,
+  x: 1337,
+  f: function (y) {
+    this.x++;
+    return this.x + y;
+  }
+};
+
+console.log(obj.x); // ??
+console.log(obj.f(3)); // ??
+console.log(obj["x"]); // ??
+console.log(obj["x-w00t"]) // ??
+
+</div>
+
+
+<p>Classes are sometimes appropriate, however. For example, they let you define
+what every object instance of the class should look like. They also let you
+define a single method that is <strong>reused</strong> by every object instance. This can be
+done in modern JavaScript. Below is a code snippet showing the older style of
+using functions, however, to accomplish similar goals. This yet-again
+demonstrate the power of JavaScript&rsquo;s function (and objects-everywhere) design:</p>
+
+<p><script src="https://embed.runkit.com" data-element-id="class"></script>
+<div id="class" nodeVersion="6.9.2">
+  
+function Car(make, model) {
+  this.make = make;
+  this.model = model;
+  this.toString = function () {
+    return `${this.make}@${this.model}`;
+  };
+}
+Car.mySweetProp = 42;
+
+const f = new Car("Ford", "Focus");
+console.log(f.toString());
+const t = new Car("Toyota", "Corola");
+console.log(t.toString());
+
+// Car.prototype is shared by all objects created by calling new Car(...)
+// That's right you can treat functions like objects!
+
+console.log(f.__proto__ === Car.prototype); // ??
+
+// Let's define property common to all cars:
+Car.prototype.color = "black";
+
+console.log(f.color); // ??
+// getProperty "color" of f
+//     if it has it, return it
+//     else getProperty "color" of f.__proto__
+console.log(t.color); // ??
+
+// Can override the default color that is defined on the prototype:
+
+t.color = "red";
+
+console.log(t.color); // ??
+console.log(f.color); // ??
+
+// We can define a method on the prototype:
+
+Car.prototype.toColorString = function () {
+  return `${this.make}, ${this.model}, ${this.color}`;
+};
+
+console.log(f.toColorString()); // ??
+console.log(t.toColorString()); // ??
+
+</div>
 </p>
 
 </div>
