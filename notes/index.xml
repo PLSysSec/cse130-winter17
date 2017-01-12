@@ -53,7 +53,7 @@ console.log(g()); // ??
 This is generally considered a bad/dangerous idea, but nevertheless useful in
 some cases. Beyond security implications (mostly a concern in the browser since
 eval can easily be leverage to carry out &lt;a href=&#34;https://en.wikipedia.org/wiki/Cross-site_scripting&#34;&gt;XSS
-attacks&lt;/a&gt;, however, the
+attacks&lt;/a&gt;), however, the
 behavior of eval differs when you call it directly or indirectly. This
 difference was introduced in the name of performance. (Arguably okay since you
 should not be using eval very much, but not great.)&lt;/p&gt;
