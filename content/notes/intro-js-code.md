@@ -1,5 +1,5 @@
 +++
-date = "2017-01-09T00:00:00-00:00"
+date = "2017-01-11T00:00:00-00:00"
 description = "description"
 draft = false
 type = "notes"
@@ -44,7 +44,7 @@ function hello(x) {
 hello(42);
 {{< /runkit >}}
 
-We can, however, introdue block scoping to code that only uses `var`
+We can, however, introduce block scoping to code that only uses `var`
 declarations by using first-class functions to create a new function scope:
 
 {{< runkit scope-modernize-var >}}
@@ -78,6 +78,34 @@ function hello(x) {
 
 hello(42);
 {{< /runkit >}}
+
+Fat arrows or [arrow
+functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+can make our code much cleaner and using them will make the lambda calculus
+lecture much easier too. Below is some code showing the use of fat arrows and
+how more syntax goes away as our functions get simpler:
+
+{{< runkit fat-arrows >}}
+const f = (x) => { 
+  console.log('hello!');
+  return x;
+};
+
+f(34); // ??
+
+// if your function is simple, and only has one expression, can write it as:
+const g = (x) =>  x ;
+// no more {}' and "return"!
+console.log(g(33));
+
+// In fact, if function only has 1 argument, you can even remove the ()'s:
+const h = x =>  x+3;
+console.log(h(33)); // ??
+
+// We can also use it immediately, inline:
+console.log(((x, y) => x + y) (4, 5)) ; // ??
+{{< /runkit >}}
+
 
 ## Callbacks for performing concurrent, asynchronous filesystem reads:
 
@@ -344,3 +372,5 @@ function requireMyModule() {
 Node modules are slightly more complicated, but not that much more! They
 basically take the contents of a file, wrap it as if the module was a function
 (with `"function (exports ) {"` et.c) and then `eval` it!
+
+**[Continue with objects here](../intro-js-code-2)**.

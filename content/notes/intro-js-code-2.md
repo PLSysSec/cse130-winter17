@@ -1,3 +1,41 @@
++++
+date = "2017-01-09T00:00:00-00:00"
+description = "description"
+draft = false
+type = "notes"
+title = "JavaScript objects"
+
++++
+
+{{< load-runkit >}}
+
+Below is the code snippet illustrating simple JavaScript objects, created using
+the object literal notation:
+
+{{< runkit receiver >}}
+const obj = {
+  "x-w00t": 10,
+  x: 1337,
+  f: function (y) {
+    this.x++;
+    return this.x + y;
+  }
+};
+
+console.log(obj.x); // ??
+console.log(obj.f(3)); // ??
+console.log(obj["x"]); // ??
+console.log(obj["x-w00t"]) // ??
+{{< /runkit >}}
+
+Classes are sometimes appropriate, however. For example, they let you define
+what every object instance of the class should look like. They also let you
+define a single method that is **reused** by every object instance. This can be
+done in modern JavaScript. Below is a code snippet showing the older style of
+using functions, however, to accomplish similar goals. This yet-again
+demonstrate the power of JavaScript's function (and objects-everywhere) design:
+
+{{< runkit class >}}
 function Car(make, model) {
   this.make = make;
   this.model = model;
@@ -41,3 +79,4 @@ Car.prototype.toColorString = function () {
 
 console.log(f.toColorString()); // ??
 console.log(t.toColorString()); // ??
+{{< /runkit >}}
