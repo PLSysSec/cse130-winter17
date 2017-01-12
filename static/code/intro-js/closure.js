@@ -23,7 +23,7 @@ console.log(sub42(42)); // ??
 // Note the environment:
 
 function f(x) {
-  let y = x;
+  let y = x; // 5, 8
   return function (z) {
     y += z;
     return y;
@@ -31,4 +31,10 @@ function f(x) {
 }
 
 const h = f(5);
-console.log(h(3)); // ??
+console.log(h(3)); // 8
+console.log(h(4)); // 12
+const j = f(5);
+console.log(j(3)); // ?
+console.log(j(4)); // ??
+
+console.log(h === j); // ??
