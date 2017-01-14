@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>JavaScript Section Notes - Week 1, 1/13/2017  &middot; CSE 130</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="description" />
+
+<meta name="keywords" content="">
+
+
+<meta property="og:title" content="JavaScript Section Notes - Week 1, 1/13/2017  &middot; CSE 130 ">
+<meta property="og:site_name" content="CSE 130"/>
+<meta property="og:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/section-1-notes/" />
+<meta property="og:locale" content="en-us">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="description"/>
+<meta property="og:article:published_time" content="2017-01-13T00:00:00Z" />
+<meta property="og:article:modified_time" content="2017-01-13T00:00:00Z" />
+
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@deiandelmars" />
+<meta name="twitter:creator" content="@deiandelmars" />
+<meta name="twitter:title" content="JavaScript Section Notes - Week 1, 1/13/2017" />
+<meta name="twitter:description" content="description" />
+<meta name="twitter:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/section-1-notes/" />
+<meta name="twitter:domain" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "JavaScript Section Notes - Week 1, 1\/13\/2017",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2017-01-13",
+    "description": "description",
+    "wordCount":  799 
+  }
+</script>
+
+
+
+<link rel="canonical" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/section-1-notes/" />
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/touch-icon-144-precomposed.png">
+<link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/favicon.png" rel="icon">
+<meta name="theme-color" content="#2053AB">
+<meta name="generator" content="Hugo 0.17" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:300%7CRaleway%7COpen+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/style.css">
+<link rel="stylesheet" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/highlight/default.css">
+
+  
+</head>
+<body>
+  <main id="main-wrapper" class="container main_wrapper has-sidebar">
+    <header id="main-header" class="container main_header">
+  <div class="container brand">
+  <div class="container title h1-like">
+  <a class="baselink" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17">
+  CSE 130
+
+</a>
+
+</div>
+
+  
+<div class="container topline">
+  
+  Programming Languages: Principles and Paradigms
+
+
+</div>
+
+
+</div>
+
+  <nav class="container nav primary no-print">
+  
+
+
+  
+<a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/about">Organization &amp; Policies</a>
+
+<a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/syllabus" title="Course syllabus">Syllabus</a>
+
+<a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/contact">Contact</a>
+
+<a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes">Notes &amp; Readings</a>
+
+
+</nav>
+
+<div class="container nav secondary no-print">
+  
+<a id="contact-link-email" class="contact_link" href="mailto:deian&#43;cse130@cs.ucsd.edu">
+  <span class="fa fa-envelope-square"></span><span>email</span></a>
+
+
+
+<a id="contact-link-github" class="contact_link" href="https://github.com/plsyssec/cse130-winter17">
+  <span class="fa fa-github-square"></span><span>github</span></a>
+
+
+
+
+
+
+
+
+
+
+
+<a id="contact-link-twitter" class="contact_link" href="https://twitter.com/deiandelmars">
+  <span class="fa fa-twitter-square"></span><span>twitter</span></a>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+
+</header>
+
+
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>JavaScript Section Notes - Week 1, 1/13/2017
+</h1>
+
+</header>
+
+  <div class="container content">
+  <p>Part 1: Installing Node</p>
+
+<p>First off, here&rsquo;s how to install Node.
+On Windows or Mac you can just get the installer from the
+Node site: <a href="http://nodejs.org">http://nodejs.org</a>
+For this discussion I&rsquo;m running 6.9.4, current LTS release
+This is sufficient for what we want to do.</p>
+
+<p>On linux, download the tar.xz file, go to its directory and then run e.g.
+tar -xvJf node-*.xz</p>
+
+<p>Move the resulting folder somewhere convenient; I have it at
+/home/mario/cse130_node
+Then add it to your path: edit your ~/.bashrc, .zshrc, etc
+export PATH=/home/mario/cse130_node/bin:$PATH</p>
+
+<p>now when you run node you should get the node.js REPL. yay!</p>
+
+<p>There&rsquo;s also NVM (Node Version Manager),
+which unfortunately doesn&rsquo;t work on my machine.
+There&rsquo;s a script on their site (nvm.sh) you can run to install it manually.
+This is worth knowing about because it makes it easier to keep multiple
+versions of NVM around.</p>
+
+<p>Part 2: The JS Event Loop</p>
+
+<p>This provides a relatively simple concurrency model, so the
+programmer doesn&rsquo;t really have much to think about: run what you can;
+wait when you need to. While it&rsquo;s not
+perfect one can get a lot of mileage out of it, especially when one
+is running many I/O intensive (or otherwise waiting-intensive)
+tasks at the same time.</p>
+
+<pre><code class="language-js">let l = setInterval(function () {console.log(&quot;hello&quot;);}, 1000);
+clearInterval(l);
+</code></pre>
+
+<p>A more motivated node example:</p>
+
+<pre><code class="language-js">fs.watch('.', function (eventType, filename)
+ {if(filename) console.log(`change to ${filename}`);});
+</code></pre>
+
+<p>Now we can get notified every time our file changes! Sweet.</p>
+
+<p>This is what &ldquo;callbacks&rdquo; are all about: rather than, for instance,
+blocking execution when we read a large file, we can instead
+call a (higher order)
+function like fs.readFile, and you give it a function specifying
+what should be done when the file is loaded.</p>
+
+<p>Here&rsquo;s a fun example: run mkfifo pipe at the shell, then at node</p>
+
+<pre><code class="language-js">console.log(fs.readFileSync(&quot;./pipe&quot;).toString());
+</code></pre>
+
+<p>in another console say
+cat pipe
+type some stuff, then press control-D
+notice what&rsquo;s going on in the other console while you&rsquo;re typing text</p>
+
+<p>now change that line to</p>
+
+<pre><code class="language-js">fs.readFile(&quot;./pipe&quot;, (err, data) =&gt; console.log(data.toString()))
+</code></pre>
+
+<p>see what happens now! (note that the data now comes in a Buffer
+data structure which is why we must convert to string)</p>
+
+<p>Part 4: Lambda Calculus
+&ldquo;Dude, Where&rsquo;s My Data??&rdquo;</p>
+
+<p>We&rsquo;ll proceed in JavaScript, but imagine you&rsquo;re sitting down with the
+raw lambda calculus and want to write a program. A natural first question
+is the above. Namely, the lambda calculus doesn&rsquo;t seem to come with any
+types for representing data, other than functions!</p>
+
+<p>While we could add data types to the language (which is the approach
+nearly all languages take, including Haskell) there is another approach
+we can take: instead we can use what&rsquo;s called Church encoding,
+essentially encoding data as control flow.</p>
+
+<p>Let&rsquo;s start simple: booleans. How can we simulate their behavior? We
+have nothing but functions.</p>
+
+<p>This seems tricky, so let&rsquo;s try turning the problem on its head:
+how can we <em>use</em> booleans? Fundamentally they only contain one bit
+of information; we can process that fully with a single if-else
+statement: if(b) then c1 else c2</p>
+
+<p>In fact, we can see this &ldquo;if&rdquo; behavior as completely characterizing booleans.
+Suppose we had, for each boolean, a function ifb, that took two
+functions c1 and c2, and ran the first one if true, second if false?</p>
+
+<pre><code class="language-js">ifb(true, c1, c2) = c1()
+ifb(false, c1, c2) = c2()
+</code></pre>
+
+<p>equivalently we could see these as two functions:</p>
+
+<pre><code class="language-js">ifbtrue(c1, c2) = c1()
+ifbfalse(c1, c2) = c2()
+</code></pre>
+
+<p>in fact, we can see ifbtrue as capturing a notion of
+&ldquo;true boolean value&rdquo; and likewise ifbfalse. From now on we&rsquo;ll just
+write true for ifbtrue, false for ifbfalse</p>
+
+<pre><code class="language-js">let mytrue = (c1, c2) =&gt; c1;
+let myfalse = (c1, c2) =&gt; c2;
+
+let myif = (b, c1, c2) =&gt; b(c1, c2);
+</code></pre>
+
+<p>Once we have booleans, we can construct pairs. Any ideas how?</p>
+
+<p>OK, so a pair is really just two pieces of data, with projections
+(think &ldquo;field names&rdquo;) for the two elements. Building off our booleans,
+we can say that &ldquo;true&rdquo; is the field name of the first element, and
+false the second. Projection looks like:</p>
+
+<p>projtrue((c1, c2)) = c1()
+projfalse((c1, c2)) = c2()</p>
+
+<p>more concisely,</p>
+
+<p>proj(b, (c1, c2)) = if b then c1() else c2()</p>
+
+<p>In fact, we can view pairs as precisely these projection functions:
+proj(b, p) = b(p) = if b then p(true) else p(false)</p>
+
+<pre><code class="language-js">var mypaircon = (c1, c2) =&gt; ((b) =&gt; b(c1, c2));
+var myproj1 = (p) =&gt; p(mytrue);
+var myproj2 = (p) =&gt; p(myfalse);
+</code></pre>
+
+<p>What about numbers?
+Well, with booleans and pairs, we have enough to represent fixed-width ints
+(noting that we can make pairs of pairs, and pairs of pairs of pairs,
+and so on, allowing us to represent arbitrary length bit vectors)</p>
+
+<p>There&rsquo;s an encoding that can represent all numbers, called the &ldquo;Church Numerals&rdquo;
+If you&rsquo;re curious, ask offline! They are complicated but similar in spirit to this.</p>
+
+</div>
+
+
+  
+</article>
+      <footer id="main-footer" class="container main_footer">
+  
+
+  <div class="container nav foot no-print">
+  
+
+  <a class="toplink" href="#">back to top</a>
+
+</div>
+
+  <div class="container credits">
+  
+<div class="container footline">
+  
+
+</div>
+
+
+  
+
+</div>
+
+</footer>
+
+    </main>
+    
+
+
+<script src="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+    
+  </body>
+</html>
+
