@@ -544,6 +544,158 @@ basically take the contents of a file, wrap it as if the module was a function
     </item>
     
     <item>
+      <title>JavaScript Section Notes - Week 1, 1/13/2017</title>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/section-1-notes/</link>
+      <pubDate>Mon, 09 Jan 2017 00:00:00 +0000</pubDate>
+      <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/section-1-notes/</guid>
+      <description>&lt;p&gt;Part 1: Installing Node&lt;/p&gt;
+
+&lt;p&gt;First off, here&amp;rsquo;s how to install Node.
+On Windows or Mac you can just get the installer from the
+Node site: &lt;a href=&#34;http://nodejs.org&#34;&gt;http://nodejs.org&lt;/a&gt;
+For this discussion I&amp;rsquo;m running 6.9.4, current LTS release
+This is sufficient for what we want to do.&lt;/p&gt;
+
+&lt;p&gt;On linux, download the tar.xz file, go to its directory and then run e.g.
+tar -xvJf node-*.xz&lt;/p&gt;
+
+&lt;p&gt;Move the resulting folder somewhere convenient; I have it at
+/home/mario/cse130_node
+Then add it to your path: edit your ~/.bashrc, .zshrc, etc
+export PATH=/home/mario/cse130_node/bin:$PATH&lt;/p&gt;
+
+&lt;p&gt;now when you run node you should get the node.js REPL. yay!&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s also NVM (Node Version Manager),
+which unfortunately doesn&amp;rsquo;t work on my machine.
+There&amp;rsquo;s a script on their site (nvm.sh) you can run to install it manually.
+This is worth knowing about because it makes it easier to keep multiple
+versions of NVM around.&lt;/p&gt;
+
+&lt;p&gt;Part 2: The JS Event Loop&lt;/p&gt;
+
+&lt;p&gt;This provides a relatively simple concurrency model, so the
+programmer doesn&amp;rsquo;t really have much to think about: run what you can;
+wait when you need to. While it&amp;rsquo;s not
+perfect one can get a lot of mileage out of it, especially when one
+is running many I/O intensive (or otherwise waiting-intensive)
+tasks at the same time.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;let l = setInterval(function () {console.log(&amp;quot;hello&amp;quot;);}, 1000);
+clearInterval(l);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A more motivated node example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;fs.watch(&#39;.&#39;, function (eventType, filename)
+ {if(filename) console.log(`change to ${filename}`);});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we can get notified every time our file changes! Sweet.&lt;/p&gt;
+
+&lt;p&gt;This is what &amp;ldquo;callbacks&amp;rdquo; are all about: rather than, for instance,
+blocking execution when we read a large file, we can instead
+call a (higher order)
+function like fs.readFile, and you give it a function specifying
+what should be done when the file is loaded.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a fun example: run mkfifo pipe at the shell, then at node&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;console.log(fs.readFileSync(&amp;quot;./pipe&amp;quot;).toString());
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in another console say
+cat pipe
+type some stuff, then press control-D
+notice what&amp;rsquo;s going on in the other console while you&amp;rsquo;re typing text&lt;/p&gt;
+
+&lt;p&gt;now change that line to&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;fs.readFile(&amp;quot;./pipe&amp;quot;, (err, data) =&amp;gt; console.log(data.toString()))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;see what happens now! (note that the data now comes in a Buffer
+data structure which is why we must convert to string)&lt;/p&gt;
+
+&lt;p&gt;Part 4: Lambda Calculus
+&amp;ldquo;Dude, Where&amp;rsquo;s My Data??&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ll proceed in JavaScript, but imagine you&amp;rsquo;re sitting down with the
+raw lambda calculus and want to write a program. A natural first question
+is the above. Namely, the lambda calculus doesn&amp;rsquo;t seem to come with any
+types for representing data, other than functions!&lt;/p&gt;
+
+&lt;p&gt;While we could add data types to the language (which is the approach
+nearly all languages take, including Haskell) there is another approach
+we can take: instead we can use what&amp;rsquo;s called Church encoding,
+essentially encoding data as control flow.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s start simple: booleans. How can we simulate their behavior? We
+have nothing but functions.&lt;/p&gt;
+
+&lt;p&gt;This seems tricky, so let&amp;rsquo;s try turning the problem on its head:
+how can we &lt;em&gt;use&lt;/em&gt; booleans? Fundamentally they only contain one bit
+of information; we can process that fully with a single if-else
+statement: if(b) then c1 else c2&lt;/p&gt;
+
+&lt;p&gt;In fact, we can see this &amp;ldquo;if&amp;rdquo; behavior as completely characterizing booleans.
+Suppose we had, for each boolean, a function ifb, that took two
+functions c1 and c2, and ran the first one if true, second if false?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;ifb(true, c1, c2) = c1()
+ifb(false, c1, c2) = c2()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;equivalently we could see these as two functions:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;ifbtrue(c1, c2) = c1()
+ifbfalse(c1, c2) = c2()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in fact, we can see ifbtrue as capturing a notion of
+&amp;ldquo;true boolean value&amp;rdquo; and likewise ifbfalse. From now on we&amp;rsquo;ll just
+write true for ifbtrue, false for ifbfalse&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;let mytrue = (c1, c2) =&amp;gt; c1;
+let myfalse = (c1, c2) =&amp;gt; c2;
+
+let myif = (b, c1, c2) =&amp;gt; b(c1, c2);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once we have booleans, we can construct pairs. Any ideas how?&lt;/p&gt;
+
+&lt;p&gt;OK, so a pair is really just two pieces of data, with projections
+(think &amp;ldquo;field names&amp;rdquo;) for the two elements. Building off our booleans,
+we can say that &amp;ldquo;true&amp;rdquo; is the field name of the first element, and
+false the second. Projection looks like:&lt;/p&gt;
+
+&lt;p&gt;projtrue((c1, c2)) = c1()
+projfalse((c1, c2)) = c2()&lt;/p&gt;
+
+&lt;p&gt;more concisely,&lt;/p&gt;
+
+&lt;p&gt;proj(b, (c1, c2)) = if b then c1() else c2()&lt;/p&gt;
+
+&lt;p&gt;In fact, we can view pairs as precisely these projection functions:
+proj(b, p) = b(p) = if b then p(true) else p(false)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var mypaircon = (c1, c2) =&amp;gt; ((b) =&amp;gt; b(c1, c2));
+var myproj1 = (p) =&amp;gt; p(mytrue);
+var myproj2 = (p) =&amp;gt; p(myfalse);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What about numbers?
+Well, with booleans and pairs, we have enough to represent fixed-width ints
+(noting that we can make pairs of pairs, and pairs of pairs of pairs,
+and so on, allowing us to represent arbitrary length bit vectors)&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s an encoding that can represent all numbers, called the &amp;ldquo;Church Numerals&amp;rdquo;
+If you&amp;rsquo;re curious, ask offline! They are complicated but similar in spirit to this.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>JavaScript objects</title>
       <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-2/</link>
       <pubDate>Mon, 09 Jan 2017 00:00:00 +0000</pubDate>
