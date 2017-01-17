@@ -19,6 +19,7 @@ discussed in class.
 * **Section:** Fridays, 8:00-8:50AM in WLH 2005
 * **Staff email:** <ucsd-cse130-winter17@googlegroups.com>
 * **Piazza:** <https://piazza.com/ucsd/winter2017/cse130>
+* **Clicker registration:** <https://goo.gl/forms/7BNqWZIl15n7rKL63>
 
 #### Textbook
 

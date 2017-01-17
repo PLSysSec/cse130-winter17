@@ -18,21 +18,18 @@ matters, please post a private question or contact the course staff by email.
 - **Name:** [Deian Stefan](https://cseweb.ucsd.edu/~dstefan/)
 - **Email:** <deian+cse130@cs.ucsd.edu>
 - **Address:** CSE 3126
-- **Office Hours:** Wed 1:30-2:30PM or by appointment
+- **Office Hours:** Friday 1:30-2:30PM or by appointment
 
 ##### Teaching Assistants
 
 - **Name:** Mario M. Alvarez
-- **Office hours:** Monday, 4pm-5pm in CSE B240A starting 9/16
+- **Office hours:** Monday, 4pm-5pm in CSE B240A starting 1/16
 <hr/>
 - **Name:** Atyansh Jaiswal (AJ)
 - **Office hours:** Tuesday 4-5PM in CSE 3111
 <hr/>
 - **Name:** Abdulrahman M. Alkhelaifi (Abdul)
 - **Office hours:** Thursday 3 - 4 PM in CSE B260A
-<hr/>
-- **Name:** Jiashen Wang
-- **Office hours:** Friday 9 AM - 10 AM in CSE Basement 240A
 <hr/>
 - **Name:** Matthew Chan
 - **Office hours:** Wednesday 5 - 6 PM in CSE 3111
