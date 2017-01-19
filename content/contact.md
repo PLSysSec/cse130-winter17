@@ -23,7 +23,7 @@ matters, please post a private question or contact the course staff by email.
 ##### Teaching Assistants
 
 - **Name:** Mario M. Alvarez
-- **Office hours:** Monday, 4pm-5pm in CSE B240A starting 1/16
+- **Office hours:** Monday, 4pm-5pm in CSE B240A
 <hr/>
 - **Name:** Atyansh Jaiswal (AJ)
 - **Office hours:** Tuesday 4-5PM in CSE 3111
