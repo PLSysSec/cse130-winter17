@@ -1023,7 +1023,7 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 23&lt;/th&gt;
     &lt;td&gt;
-      Scope, storage management, and function implementation
+      Lambda calculus (cont)
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
@@ -1031,22 +1031,25 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 25&lt;/th&gt;
     &lt;td&gt;
-      Haskell crash course
+      Scope, storage management, and function implementation
+      [ readings: chapter 7]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 30&lt;/th&gt;
     &lt;td&gt;
-      Types, type systems, and ADTs
+      Haskell crash course&lt;br/&gt;
+      [ readings: &lt;a href=&#34;../book/ch05.pdf&#34;&gt;chater 5&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 01&lt;/th&gt;
     &lt;td&gt;
-      Type polymorphism and type inference
+      Types, type systems, and ADTs&lt;br/&gt;
+      [ readings: &lt;a href=&#34;../book/ch06.pdf&#34;&gt;chater 6&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 06&lt;/th&gt;
     &lt;td&gt;
-      Type classes and type traits
+      Type polymorphism and type inference
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
@@ -1054,17 +1057,18 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 08&lt;/th&gt;
     &lt;td&gt;
-      Side-effects and the IO monad
+      Type classes and type traits&lt;br/&gt;
+      [ readings: &lt;a href=&#34;../book/ch07.pdf&#34;&gt;chater 7&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 13&lt;/th&gt;
     &lt;td&gt;
-      Exceptions and error recovery
+      Side-effects and the IO monad
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 15&lt;/th&gt;
     &lt;td&gt;
-      Continuations
+      Exceptions and continuations
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 20&lt;/th&gt;
