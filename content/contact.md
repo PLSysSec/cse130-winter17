@@ -32,4 +32,4 @@ matters, please post a private question or contact the course staff by email.
 - **Office hours:** Thursday 3 - 4 PM in CSE B260A
 <hr/>
 - **Name:** Matthew Chan
-- **Office hours:** Wednesday 5 - 6 PM in CSE 3111
+- **Office hours:** Wednesday 4:30 - 6 PM in CSE 3111
