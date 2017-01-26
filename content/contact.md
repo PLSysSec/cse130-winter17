@@ -33,3 +33,6 @@ matters, please post a private question or contact the course staff by email.
 <hr/>
 - **Name:** Matthew Chan
 - **Office hours:** Wednesday 4:30 - 6 PM in CSE 3111
+<hr/>
+- **Name:** Antonella Wilby
+- **Office hours:** Friday 12:30 - 2 PM in CSE 2238
