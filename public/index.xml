@@ -8,8 +8,52 @@
     <language>en-us</language>
     <managingEditor>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</managingEditor>
     <webMaster>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</webMaster>
-    <lastBuildDate>Fri, 13 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Currying</title>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/curry/</link>
+      <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
+      <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/curry/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/default.min.css&#34;&gt;
+&lt;script src=&#34;https://cseweb.ucsd.edu/~dstefan/cse130-winter17/js/highlight.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Below is the code snippet illustrating how to implement multi-argument functions using lambdas and back:&lt;/p&gt;
+
+&lt;script src=&#34;https://embed.runkit.com&#34; data-element-id=&#34;curry&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;curry&#34; nodeVersion=&#34;6.9.2&#34;&gt;
+  
+// Let&#39;s take a 3 argument function
+const foo = (x, y, z) =&gt; x + y + z;
+// This function can be curried, i.e., it can be implemented using
+// single-argument functions:
+const foo_curried = (x) =&gt; (y) =&gt; (z) =&gt; x + y +z;
+// a single argument function can always be used to implement a
+// multiple-argument functions:
+const foo_uncurried = (x,y,z) =&gt; foo_curried(x)(y)(z);
+// all the foo&#39;s are equivalent:
+// the only thing thatchanges is how we call the function
+
+console.log(foo(1,2,3));
+console.log(foo_curried(1)(2)(3));
+console.log(foo_uncurried(1,2,3));
+
+&lt;/div&gt;
+
+
+&lt;p&gt;In a language with only sigle-argument lambdas, you can add syntactic sugar to
+implement multiple-argument functions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Function declaration: &lt;code&gt;(x1,x2,x3,...,xn) =&amp;gt; e&lt;/code&gt; gets transformed to &lt;code&gt;(x1) =&amp;gt; (x2) =&amp;gt; (x3) =&amp;gt; ... =&amp;gt; (xn) =&amp;gt; e&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Function application: &lt;code&gt;f(e1, e2, e3, ..., en)&lt;/code&gt; gets transformed to &lt;code&gt;f(e1)(e2)(e3)...(en)&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>JavaScript Section Notes - Week 1, 1/13/2017</title>
@@ -1024,51 +1068,53 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 23&lt;/th&gt;
     &lt;td&gt;
       Lambda calculus (cont)
+      &lt;br/&gt;[ &lt;a href=&#34;../slides/lambda-calculus-cont.pdf&#34;&gt;slides&lt;/a&gt; | &lt;a href=&#34;../notes/curry&#34;&gt;notes on currying&lt;/a&gt; ] 
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 25&lt;/th&gt;
+    &lt;td&gt;
+      Lambda calculus (cont)
+      &lt;br/&gt;[ &lt;a href=&#34;../slides/lambda-calculus-cont.pdf&#34;&gt;slides&lt;/a&gt; | &lt;a href=&#34;../notes/curry&#34;&gt;notes on currying&lt;/a&gt; ] 
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 30&lt;/th&gt;
+    &lt;td&gt;
+      Scope, storage management, and function implementation
+      &lt;br/&gt; [ readings: chapter 7]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
     &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Types&lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Jan 25&lt;/th&gt;
-    &lt;td&gt;
-      Scope, storage management, and function implementation
-      [ readings: chapter 7]
-    &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 30&lt;/th&gt;
-    &lt;td&gt;
-      Haskell crash course&lt;br/&gt;
-      [ readings: &lt;a href=&#34;../book/ch05.pdf&#34;&gt;chater 5&lt;/a&gt;]
-    &lt;/td&gt;
-  &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 01&lt;/th&gt;
     &lt;td&gt;
-      Types, type systems, and ADTs&lt;br/&gt;
-      [ readings: &lt;a href=&#34;../book/ch06.pdf&#34;&gt;chater 6&lt;/a&gt;]
+      Haskell crash course&lt;br/&gt;
+      [ readings: &lt;a href=&#34;../book/ch05.pdf&#34;&gt;new chater 5&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 06&lt;/th&gt;
     &lt;td&gt;
-      Type polymorphism and type inference
+      Types, type systems, and ADTs&lt;br/&gt;
+      [ readings: &lt;a href=&#34;../book/ch06.pdf&#34;&gt;new chater 6&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Side-effects and control structures&lt;/td&gt;
-  &lt;/tr&gt;
+  &lt;!-- &lt;tr&gt; --&gt;
+  &lt;!--   &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Side&amp;#45;effects and control structures&lt;/td&gt; --&gt;
+  &lt;!-- &lt;/tr&gt; --&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 08&lt;/th&gt;
     &lt;td&gt;
-      Type classes and type traits&lt;br/&gt;
-      [ readings: &lt;a href=&#34;../book/ch07.pdf&#34;&gt;chater 7&lt;/a&gt;]
+      Type polymorphism and type inference
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 13&lt;/th&gt;
     &lt;td&gt;
-      Side-effects and the IO monad
+      Type classes and type traits&lt;br/&gt;
+      [ readings: &lt;a href=&#34;../book/ch07.pdf&#34;&gt;new chater 7&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 15&lt;/th&gt;
     &lt;td&gt;
-      Exceptions and continuations
+      The IO monad and side-effects
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 20&lt;/th&gt;
