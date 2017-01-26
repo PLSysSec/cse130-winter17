@@ -5,31 +5,59 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Notes  &middot; CSE 130</title>
+  <title>Currying  &middot; CSE 130</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="description" content="" />
+<meta name="description" content="description" />
 
 <meta name="keywords" content="">
 
 
-<meta property="og:title" content="Notes  &middot; CSE 130 ">
+<meta property="og:title" content="Currying  &middot; CSE 130 ">
 <meta property="og:site_name" content="CSE 130"/>
-<meta property="og:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/" />
+<meta property="og:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/curry/" />
 <meta property="og:locale" content="en-us">
 
 
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="description"/>
+<meta property="og:article:published_time" content="2017-01-25T00:00:00Z" />
+<meta property="og:article:modified_time" content="2017-01-25T00:00:00Z" />
+
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@deiandelmars" />
+<meta name="twitter:creator" content="@deiandelmars" />
+<meta name="twitter:title" content="Currying" />
+<meta name="twitter:description" content="description" />
+<meta name="twitter:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/curry/" />
+<meta name="twitter:domain" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Currying",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2017-01-25",
+    "description": "description",
+    "wordCount":  149 
+  }
+</script>
 
 
 
-<link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/index.xml" rel="alternate" type="application/rss+xml" title="Notes" />
-
-<link rel="canonical" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/" />
+<link rel="canonical" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/curry/" />
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/touch-icon-144-precomposed.png">
 <link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/favicon.png" rel="icon">
@@ -128,70 +156,55 @@
 </header>
 
 
-<section id="main-content" class="container main_content section">
-  <header class="container">
-    <h1>Notes
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>Currying
 </h1>
 
-  </header>
+</header>
+
+  <div class="container content">
+  <link rel="stylesheet" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/default.min.css">
+<script src="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/js/highlight.min.js"></script>
+
+
+<p>Below is the code snippet illustrating how to implement multi-argument functions using lambdas and back:</p>
+
+<script src="https://embed.runkit.com" data-element-id="curry"></script>
+<div id="curry" nodeVersion="6.9.2">
   
-    <div class="container hat">
-  <h2><a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/curry/">Currying
-</a>
-</h2>
+// Let's take a 3 argument function
+const foo = (x, y, z) => x + y + z;
+// This function can be curried, i.e., it can be implemented using
+// single-argument functions:
+const foo_curried = (x) => (y) => (z) => x + y +z;
+// a single argument function can always be used to implement a
+// multiple-argument functions:
+const foo_uncurried = (x,y,z) => foo_curried(x)(y)(z);
+// all the foo's are equivalent:
+// the only thing thatchanges is how we call the function
+
+console.log(foo(1,2,3));
+console.log(foo_curried(1)(2)(3));
+console.log(foo_uncurried(1,2,3));
+
+</div>
+
+
+<p>In a language with only sigle-argument lambdas, you can add syntactic sugar to
+implement multiple-argument functions:</p>
+
+<ul>
+<li><p>Function declaration: <code>(x1,x2,x3,...,xn) =&gt; e</code> gets transformed to <code>(x1) =&gt; (x2) =&gt; (x3) =&gt; ... =&gt; (xn) =&gt; e</code></p></li>
+
+<li><p>Function application: <code>f(e1, e2, e3, ..., en)</code> gets transformed to <code>f(e1)(e2)(e3)...(en)</code></p></li>
+</ul>
 
 </div>
 
 
   
-    <div class="container hat">
-  <h2><a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/section-1-notes/">JavaScript Section Notes - Week 1, 1/13/2017
-</a>
-</h2>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-3/">JavaScript No-Nos
-</a>
-</h2>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code/">The power of JavaScript first-class functions
-</a>
-</h2>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-2/">JavaScript objects
-</a>
-</h2>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js/">Intro and JavaScript
-</a>
-</h2>
-
-</div>
-
-
-  
-  
-
-</section>
+</article>
       <footer id="main-footer" class="container main_footer">
   
 
