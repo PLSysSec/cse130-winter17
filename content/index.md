@@ -16,7 +16,7 @@ discussed in class.
 
 * **Section ID:** 895741
 * **Lectures:** Mondays and Wednesdays, 6:30-7:50PM in Ledden Auditorium
-* **Section:** Fridays, 8:00-8:50AM in WLH 2005
+* **Section:** Fridays, 8:00-8:50AM in WLH 2005 and 3:00-3:50 PM in Pepper Canyon 122
 * **Staff email:** <ucsd-cse130-winter17@googlegroups.com>
 * **Piazza:** <https://piazza.com/ucsd/winter2017/cse130>
 * **Clicker registration:** <https://goo.gl/forms/7BNqWZIl15n7rKL63>
@@ -41,7 +41,6 @@ Languages</a> is a must.
 - Mario Alvarez (TA)
 - Atyansh Jaiswal (TA)
 - Abdul Alkhelaifi (TA)
-- Jiashen Wang (TA)
 - Matt Chan (tutor)
 - Antonella Wilby (TA)
 
