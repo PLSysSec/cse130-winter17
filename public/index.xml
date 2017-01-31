@@ -1080,7 +1080,7 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Jan 30&lt;/th&gt;
     &lt;td&gt;
       Scope, storage management, and function implementation
-      &lt;br/&gt; [ readings: chapter 7]
+      &lt;br/&gt; [ readings: chapter 7 | &lt;a href=&#34;../slides/scope.pdf&#34;&gt;slides&lt;/a&gt; | &lt;a href=&#34;http://pythontutor.com/javascript.html&#34;&gt;great online scope-learning tool&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
@@ -1089,13 +1089,13 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 01&lt;/th&gt;
     &lt;td&gt;
       Haskell crash course&lt;br/&gt;
-      [ readings: &lt;a href=&#34;../book/ch05.pdf&#34;&gt;new chater 5&lt;/a&gt;]
+      [ readings: &lt;a href=&#34;../book/ch05.pdf&#34;&gt;new chapter 5&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 06&lt;/th&gt;
     &lt;td&gt;
       Types, type systems, and ADTs&lt;br/&gt;
-      [ readings: &lt;a href=&#34;../book/ch06.pdf&#34;&gt;new chater 6&lt;/a&gt;]
+      [ readings: &lt;a href=&#34;../book/ch06.pdf&#34;&gt;new chapter 6&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;!-- &lt;tr&gt; --&gt;
@@ -1109,7 +1109,7 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 13&lt;/th&gt;
     &lt;td&gt;
       Type classes and type traits&lt;br/&gt;
-      [ readings: &lt;a href=&#34;../book/ch07.pdf&#34;&gt;new chater 7&lt;/a&gt;]
+      [ readings: &lt;a href=&#34;../book/ch07.pdf&#34;&gt;new chapter 7&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 15&lt;/th&gt;
@@ -1190,7 +1190,7 @@ discussed in class.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Section ID:&lt;/strong&gt; 895741&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Lectures:&lt;/strong&gt; Mondays and Wednesdays, 6:30-7:50PM in Ledden Auditorium&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Section:&lt;/strong&gt; Fridays, 8:00-8:50AM in WLH 2005&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Section:&lt;/strong&gt; Fridays, 8:00-8:50AM in WLH 2005 and 3:00-3:50 PM in Pepper Canyon 122&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Staff email:&lt;/strong&gt; &lt;a href=&#34;mailto:ucsd-cse130-winter17@googlegroups.com&#34;&gt;ucsd-cse130-winter17@googlegroups.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Piazza:&lt;/strong&gt; &lt;a href=&#34;https://piazza.com/ucsd/winter2017/cse130&#34;&gt;https://piazza.com/ucsd/winter2017/cse130&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Clicker registration:&lt;/strong&gt; &lt;a href=&#34;https://goo.gl/forms/7BNqWZIl15n7rKL63&#34;&gt;https://goo.gl/forms/7BNqWZIl15n7rKL63&lt;/a&gt;&lt;/li&gt;
@@ -1217,8 +1217,8 @@ Languages&lt;/a&gt; is a must.&lt;/p&gt;
 &lt;li&gt;Mario Alvarez (TA)&lt;/li&gt;
 &lt;li&gt;Atyansh Jaiswal (TA)&lt;/li&gt;
 &lt;li&gt;Abdul Alkhelaifi (TA)&lt;/li&gt;
-&lt;li&gt;Jiashen Wang (TA)&lt;/li&gt;
 &lt;li&gt;Matt Chan (tutor)&lt;/li&gt;
+&lt;li&gt;Antonella Wilby (TA)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h4&gt;
@@ -1276,7 +1276,10 @@ matters, please post a private question or contact the course staff by email.&lt
 &lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; Thursday 3 - 4 PM in CSE B260A
 &lt;hr/&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Matthew Chan&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; Wednesday 4:30 - 6 PM in CSE 3111&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; Wednesday 4:30 - 6 PM in CSE 3111
+&lt;hr/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Antonella Wilby&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; Friday 12:30 - 2 PM in CSE 2238&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
