@@ -5,31 +5,59 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Notes  &middot; CSE 130</title>
+  <title>Intro to Haskell  &middot; CSE 130</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="description" content="" />
+<meta name="description" content="description" />
 
 <meta name="keywords" content="">
 
 
-<meta property="og:title" content="Notes  &middot; CSE 130 ">
+<meta property="og:title" content="Intro to Haskell  &middot; CSE 130 ">
 <meta property="og:site_name" content="CSE 130"/>
-<meta property="og:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/" />
+<meta property="og:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/haskell/" />
 <meta property="og:locale" content="en-us">
 
 
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="description"/>
+<meta property="og:article:published_time" content="2017-02-01T00:00:00Z" />
+<meta property="og:article:modified_time" content="2017-02-01T00:00:00Z" />
+
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@deiandelmars" />
+<meta name="twitter:creator" content="@deiandelmars" />
+<meta name="twitter:title" content="Intro to Haskell" />
+<meta name="twitter:description" content="description" />
+<meta name="twitter:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/haskell/" />
+<meta name="twitter:domain" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Intro to Haskell",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2017-02-01",
+    "description": "description",
+    "wordCount":  72 
+  }
+</script>
 
 
 
-<link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/index.xml" rel="alternate" type="application/rss+xml" title="Notes" />
-
-<link rel="canonical" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/" />
+<link rel="canonical" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/haskell/" />
 
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/touch-icon-144-precomposed.png">
 <link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/favicon.png" rel="icon">
@@ -128,79 +156,34 @@
 </header>
 
 
-<section id="main-content" class="container main_content section">
-  <header class="container">
-    <h1>Notes
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>Intro to Haskell
 </h1>
 
-  </header>
+</header>
+
+  <div class="container content">
   
-    <div class="container hat">
-  <h2><a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/haskell/">Intro to Haskell
-</a>
-</h2>
+
+<h3 id="lecture-slides-and-code">Lecture slides and code</h3>
+
+<p>You can get the slides <a href="../../slides/hs-nutshell.pdf">here</a>. The slides refer
+to a Haskell source file, which you get at <a href="../../code/intro.hs">here</a>.</p>
+
+<h3 id="recommended-reading">Recommended reading</h3>
+
+<p>In addition to the <a href="../../book/ch05.pdf">assigned reading</a> you may wish to look at Brent Yorgey&rsquo;s
+lectures on School of Haskell, for example <a href="https://www.schoolofhaskell.com/school/starting-with-haskell/introduction-to-haskell/1-haskell-basics">Haskell
+Basics</a>
+is a great start. For those interest in the history of Haskell,
+<a href="http://dl.acm.org/citation.cfm?doid=1238844.1238856">A history of Haskell: Being lazy with class</a> is a fantastic read.</p>
 
 </div>
 
 
   
-    <div class="container hat">
-  <h2><a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/curry/">Currying
-</a>
-</h2>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/section-1-notes/">JavaScript Section Notes - Week 1, 1/13/2017
-</a>
-</h2>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-3/">JavaScript No-Nos
-</a>
-</h2>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code/">The power of JavaScript first-class functions
-</a>
-</h2>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js-code-2/">JavaScript objects
-</a>
-</h2>
-
-</div>
-
-
-  
-    <div class="container hat">
-  <h2><a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/intro-js/">Intro and JavaScript
-</a>
-</h2>
-
-</div>
-
-
-  
-  
-
-</section>
+</article>
       <footer id="main-footer" class="container main_footer">
   
 
