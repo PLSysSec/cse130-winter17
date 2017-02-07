@@ -147,11 +147,28 @@ unit   = ()            :: () -- kind of like void
 tuple2 = (3, 'w')      :: (Int, Char)
 tuple3 = (3, 'w', 3.3) :: (Int, Char, Double)
 
+funAdd :: (Int, Int) -> Int
+funAdd (x, y) = x+y
+
+funAdd35 = funAdd (3, 5)
+
 -- * Haskell has basic support for homogeneous lists
 --   - Constructors: (:) | []
 myIntList'' = [1,2,3] :: [Int]
 -- same as consing things:
 myIntList''' = 1:2:3:[]
+-- (:) :: Int -> [Int] -> [Int]
+-- (:) 3 [] == 3:[] == [3]
+
+-- * Cons (:) is used to add elements to the list; ++ can be used to
+-- concatenate lists:
+concatenatedList = [1,2,3] ++ [4,5,6]
+
+-- * Empty lists
+myEmptyBoolList :: [Bool]
+myEmptyBoolList = []
+myEmptyCharList :: [Char]
+myEmptyCharList = []
 
 -- * Haskell does not have support for heterogenous lists
 --   - E.g., myHeteroList = [1, 'w'] :: ???
@@ -177,7 +194,7 @@ point1 = Cartesian 3.3 2.2
 point2 = Polar 0.1 3.14
 
 data Color = Red | Green | Blue | Indigo | Violet deriving Show
-myRed = Red
+myRed = Red :: Color
 
 -- ## Using ADTs
 
@@ -191,15 +208,26 @@ myPair' = PairC 3
 
 getX :: PairT -> Int
 getX pair = case pair of
-               PairC x _ -> x
+               PairC x y -> x
+
 -- E.g., convert point to cartesian:
 toCartesian :: Point -> Point
 toCartesian point = case point of
                       Polar r theta -> Cartesian (r * cos theta)
                                                  (r * sin theta)
-                      Cartesian x y -> Cartesian x y -- or, less verbose:
-                      --pt -> pt
-                      --pt@(Cartesian _ _) -> pt
+                      -- Cartesian x y -> Cartesian x y -- or, less verbose:
+                      pt@(Cartesian _ _) -> pt
+
+-- We can define a tiny language with addition and multiplication:
+data Expr = AddExpr Expr Expr
+          | MulExpr Expr Expr
+          | ConstExpr Int
+          deriving Show
+
+eval :: Expr -> Int
+eval (ConstExpr n) = n
+eval (AddExpr e1 e2) = eval e1 + eval e2
+eval (MulExpr e1 e2) = eval e1 * eval e2
 
 -- ## Pattern matching beyond case
 
@@ -216,7 +244,15 @@ getY pair = let (PairC _ y) = pair in y
 -- * The order of pattern matching matters
 --   - E.g., What happens if we swap order?
 factorial' 0 = 1
-factorial' n = factorial' (n-1)
+factorial' n = n * (factorial' (n-1))
+
+-- * You can alternatively guard definitions:
+factorial'' n | isLT0 n = 1
+factorial'' n | otherwise = n * (factorial'' (n-1))
+
+-- * Guards are just predicates
+isLT0 :: Int -> Bool
+isLT0 = (<=0)
 
 -- ## Recursive datatypes
 
@@ -231,10 +267,11 @@ myEmptyIntList = INil :: IntList
 myIntList = ICons 1 (ICons 2 (ICons 3 myEmptyIntList)) :: IntList
 
 sumOfIntList :: IntList -> Int
-sumOfIntList = undefined
+sumOfIntList INil = 0
+sumOfIntList (ICons x xs) = x + (sumOfIntList xs)
 {- Solution:
 sumOfIntList INil = error "Empty list"
-sumOfIntList (ICons x Nil) = x
+sumOfIntList (ICons x INil) = x
 sumOfIntList (ICons x xs) = x + sumOfIntList xs
 -}
 
@@ -251,7 +288,6 @@ data CharList = CNil | CCons Char CharList deriving Show
 -- * May want to have functions that work on any kind of lists
 --   - Solution: parametrized types
 -- * Types can have parameters (kind of like functions)
-
 data List a = Nil | Cons a (List a) deriving Show
                   --     ^  ^^^^^^
 --   - Here, List itself takes an argument: type variable a.
@@ -310,3 +346,34 @@ if' b x y = case b of
 forever x = forever x
 --   - What doe the following mean?
 exampleF = if' True 3 (forever 4)
+
+-- ## Laziness FTW: undefined and error
+
+-- * Can leave things as undefined -- sometimes called bottom
+
+thisVarIsUndef = undefined
+soIsThisVar    = error "leaving this undefined for now, fixme later"
+
+-- * Because Haskell is lazy, it won't throw up unless you use them
+
+-- * Why might this be useful?
+
+-- * Note: This is not how you should raise exceptions in Haskell!
+
+
+-- # Bindings with where clauses
+
+-- * Recall that let x = ... in ... can be used to bind variable x within local scope
+
+-- * Let can be used whenever you need to create block scope; 'let's are expressions
+
+-- * Sometimes you want more flexiblity; therein comes the 'where' clauses:
+
+cmpSquare x y  |  y > z    =  "bigger :)"
+               |  y == z   =  "same :|"
+               |  y < z    =  "smaller :("
+    where z = x*x
+
+-- * Note that z is in scope of the function there
+
+-- * General: where clause associated with function equations or case expressions
