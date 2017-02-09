@@ -14,8 +14,18 @@ to a Haskell source file, which you get at [here](../../code/intro.hs).
 
 ### Assigned and recommended reading
 
-In addition to the <a href="../../book/ch05.pdf">assigned reading</a> you may wish to look at Brent Yorgey's
-lectures on School of Haskell, for example [Haskell
+In addition to the <a href="../../book/ch05.pdf">assigned reading</a> you may
+wish to look at Brent Yorgey's lectures on School of Haskell, for example
+[Haskell
 Basics](https://www.schoolofhaskell.com/school/starting-with-haskell/introduction-to-haskell/1-haskell-basics)
-is a great start. For those interest in the history of Haskell, 
-[A history of Haskell: Being lazy with class](http://dl.acm.org/citation.cfm?doid=1238844.1238856) is a fantastic read. I would also higly recommend [A Gentle Introduction to Haskell 98](https://www.haskell.org/tutorial/index.html) and looking at [The Haskell 2010 Language](https://www.haskell.org/onlinereport/haskell2010/haskellpa1.html).
+is a great start. For those interest in the history of Haskell, [A history of
+Haskell: Being lazy with
+class](http://dl.acm.org/citation.cfm?doid=1238844.1238856) is a fantastic
+read, and there is a similarly engaging
+[talk](https://www.youtube.com/watch?v=06x8Wf2r2Mc).  [A history of Haskell:
+Being lazy with class](http://dl.acm.org/citation.cfm?doid=1238844.1238856) is
+a fantastic read.  We higly recommend [A Gentle Introduction to Haskell
+98](https://www.haskell.org/tutorial/index.html) and looking at [The Haskell
+2010
+Language](https://www.haskell.org/onlinereport/haskell2010/haskellpa1.html).
+[Learn You a Haskell for Great Good!](http://learnyouahaskell.com/) is also a good book to read through.
