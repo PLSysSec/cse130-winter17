@@ -26,11 +26,21 @@ to a Haskell source file, which you get at &lt;a href=&#34;../../code/intro.hs&#
 
 &lt;h3 id=&#34;assigned-and-recommended-reading&#34;&gt;Assigned and recommended reading&lt;/h3&gt;
 
-&lt;p&gt;In addition to the &lt;a href=&#34;../../book/ch05.pdf&#34;&gt;assigned reading&lt;/a&gt; you may wish to look at Brent Yorgey&amp;rsquo;s
-lectures on School of Haskell, for example &lt;a href=&#34;https://www.schoolofhaskell.com/school/starting-with-haskell/introduction-to-haskell/1-haskell-basics&#34;&gt;Haskell
+&lt;p&gt;In addition to the &lt;a href=&#34;../../book/ch05.pdf&#34;&gt;assigned reading&lt;/a&gt; you may
+wish to look at Brent Yorgey&amp;rsquo;s lectures on School of Haskell, for example
+&lt;a href=&#34;https://www.schoolofhaskell.com/school/starting-with-haskell/introduction-to-haskell/1-haskell-basics&#34;&gt;Haskell
 Basics&lt;/a&gt;
-is a great start. For those interest in the history of Haskell,
-&lt;a href=&#34;http://dl.acm.org/citation.cfm?doid=1238844.1238856&#34;&gt;A history of Haskell: Being lazy with class&lt;/a&gt; is a fantastic read. I would also higly recommend &lt;a href=&#34;https://www.haskell.org/tutorial/index.html&#34;&gt;A Gentle Introduction to Haskell 98&lt;/a&gt; and looking at &lt;a href=&#34;https://www.haskell.org/onlinereport/haskell2010/haskellpa1.html&#34;&gt;The Haskell 2010 Language&lt;/a&gt;.&lt;/p&gt;
+is a great start. For those interest in the history of Haskell, &lt;a href=&#34;http://dl.acm.org/citation.cfm?doid=1238844.1238856&#34;&gt;A history of
+Haskell: Being lazy with
+class&lt;/a&gt; is a fantastic
+read, and there is a similarly engaging
+&lt;a href=&#34;https://www.youtube.com/watch?v=06x8Wf2r2Mc&#34;&gt;talk&lt;/a&gt;.  &lt;a href=&#34;http://dl.acm.org/citation.cfm?doid=1238844.1238856&#34;&gt;A history of Haskell:
+Being lazy with class&lt;/a&gt; is
+a fantastic read.  We higly recommend &lt;a href=&#34;https://www.haskell.org/tutorial/index.html&#34;&gt;A Gentle Introduction to Haskell
+98&lt;/a&gt; and looking at &lt;a href=&#34;https://www.haskell.org/onlinereport/haskell2010/haskellpa1.html&#34;&gt;The Haskell
+2010
+Language&lt;/a&gt;.
+&lt;a href=&#34;http://learnyouahaskell.com/&#34;&gt;Learn You a Haskell for Great Good!&lt;/a&gt; is also a good book to read through.&lt;/p&gt;
 </description>
     </item>
     
