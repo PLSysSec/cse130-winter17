@@ -1128,6 +1128,7 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 06&lt;/th&gt;
     &lt;td&gt;
       Haskell crash course (cont)
+      [ &lt;a href=&#34;../code/intro.hs&#34;&gt;code&lt;/a&gt; | &lt;a href=&#34;../notes/haskell&#34;&gt;notes&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;!-- &lt;tr&gt; --&gt;
