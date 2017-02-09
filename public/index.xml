@@ -1127,8 +1127,7 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 06&lt;/th&gt;
     &lt;td&gt;
-      Types, type systems, and ADTs&lt;br/&gt;
-      [ readings: &lt;a href=&#34;../book/ch06.pdf&#34;&gt;new chapter 6&lt;/a&gt;]
+      Haskell crash course (cont)
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;!-- &lt;tr&gt; --&gt;
@@ -1136,7 +1135,8 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;!-- &lt;/tr&gt; --&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 08&lt;/th&gt;
     &lt;td&gt;
-      Type polymorphism and type inference
+      Types, type polymorphism and type inference&lt;br/&gt;
+      [ readings: &lt;a href=&#34;../book/ch06.pdf&#34;&gt;new chapter 6&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 13&lt;/th&gt;
