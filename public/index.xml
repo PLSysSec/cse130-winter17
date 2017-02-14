@@ -1136,19 +1136,21 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;!-- &lt;/tr&gt; --&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 08&lt;/th&gt;
     &lt;td&gt;
-      Types, type polymorphism and type inference&lt;br/&gt;
-      [ readings: &lt;a href=&#34;../book/ch06.pdf&#34;&gt;new chapter 6&lt;/a&gt;]
+      Haskell and introduction to types&lt;/br&gt;
+      [ readings: &lt;a href=&#34;../book/ch06.pdf&#34;&gt;new chapter 6&lt;/a&gt; | &lt;a href=&#34;../slides/types.pdf&#34;&gt;slides&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 13&lt;/th&gt;
     &lt;td&gt;
-      Type classes and type traits&lt;br/&gt;
-      [ readings: &lt;a href=&#34;../book/ch07.pdf&#34;&gt;new chapter 7&lt;/a&gt;]
+      Type polymorphism and type inference&lt;br/&gt;
+      [ readings: &lt;a href=&#34;../book/ch07.pdf&#34;&gt;new chapter 7&lt;/a&gt; | &lt;a href=&#34;../slides/types.pdf&#34;&gt;slides&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 15&lt;/th&gt;
     &lt;td&gt;
-      The IO monad and side-effects
+      Type classes&lt;br/&gt;
+      [ readings: &lt;a href=&#34;../book/ch07.pdf&#34;&gt;new chapter 7&lt;/a&gt;]
+      &lt;!-- The IO monad and side&amp;#45;effects --&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 20&lt;/th&gt;
@@ -1313,7 +1315,7 @@ matters, please post a private question or contact the course staff by email.&lt
 &lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; Wednesday 4:30 - 6 PM in CSE 3111
 &lt;hr/&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Antonella Wilby&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; Friday 12:30 - 2 PM in CSE 2238&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Office hours:&lt;/strong&gt; Friday 1:00 - 2:30 PM in CSE 2238&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
