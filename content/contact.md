@@ -29,7 +29,7 @@ matters, please post a private question or contact the course staff by email.
 - **Office hours:** Tuesday 4-5PM in CSE 3111
 <hr/>
 - **Name:** Abdulrahman M. Alkhelaifi (Abdul)
-- **Office hours:** Thursday 3 - 4 PM in CSE B260A
+- **Office hours:** Thursday 3:30 - 4:30 PM in CSE B260A
 <hr/>
 - **Name:** Matthew Chan
 - **Office hours:** Wednesday 4:30 - 6 PM in CSE 3111
