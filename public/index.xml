@@ -1149,7 +1149,7 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 15&lt;/th&gt;
     &lt;td&gt;
       Type classes&lt;br/&gt;
-      [ readings: &lt;a href=&#34;../book/ch07.pdf&#34;&gt;new chapter 7&lt;/a&gt;]
+      [ readings: &lt;a href=&#34;../book/ch07.pdf&#34;&gt;new chapter 7&lt;/a&gt; | &lt;a href=&#34;../slides/type-classes.pdf&#34;&gt;slides&lt;/a&gt; | &lt;a href=&#34;../code/type-classes-1.hs&#34;&gt;type-classes-1.hs&lt;/a&gt; | &lt;a href=&#34;../code/type-classes-2.hs&#34;&gt;type-classes-2.hs&lt;/a&gt; ]
       &lt;!-- The IO monad and side&amp;#45;effects --&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
