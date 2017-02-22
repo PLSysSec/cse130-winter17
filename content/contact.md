@@ -35,4 +35,4 @@ matters, please post a private question or contact the course staff by email.
 - **Office hours:** Wednesday 4:30 - 6 PM in CSE 3111
 <hr/>
 - **Name:** Antonella Wilby
-- **Office hours:** Friday 1:00 - 2:30 PM in CSE 2238
+- **Office hours:** Friday 1:00 - 2:00 PM in CSE 2238
