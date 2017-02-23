@@ -1156,25 +1156,26 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 20&lt;/th&gt;
     &lt;td&gt; President&#39;s day - no class&lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 22&lt;/th&gt;
-    &lt;td&gt; Midterm exam &lt;/td&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 22&lt;/th&gt;
+    &lt;td&gt;
+    Type classes (cont) &lt;br/&gt;
+    [ &lt;a href=&#34;../code/TC1.hs&#34;&gt;using type classes&lt;/a&gt; | &lt;a href=&#34;../code/TC1D.hs&#34;&gt;desugaring type classes&lt;/a&gt; ]
+  &lt;/tr&gt;
+  &lt;tr  class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 27&lt;/th&gt;
+    &lt;td&gt; Midterm exam
+    &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
     &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Objects and program organization&lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 27&lt;/th&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 01&lt;/th&gt;
     &lt;td&gt;
       Objects, encapsulation, and dynamic dispatch
     &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 01&lt;/th&gt;
-    &lt;td&gt;
-      Subtyping and inheritance
-    &lt;/td&gt;
-  &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Mar 06&lt;/th&gt;
     &lt;td&gt;
-      Memory management and garbage collection
+      Subtyping and inheritance
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
@@ -1182,17 +1183,17 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 08&lt;/th&gt;
     &lt;td&gt;
-      Modularity and module systems
+      Memory management and garbage collection
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Mar 13&lt;/th&gt;
     &lt;td&gt;
-      Memory models and concurrency
+      Modularity and module systems
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 15&lt;/th&gt;
     &lt;td&gt;
-      STM
+      Memory models, concurrency, and STM
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;info&#34;&gt;

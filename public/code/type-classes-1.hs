@@ -3,8 +3,14 @@ import qualified Prelude
 import Prelude hiding (Num(..), Eq(..), Ord(..), map)
 
 -- # Eq class with dictionaries
-
+-- class Eq a where
+--   (==) :: a -> a -> Bool
 data Eq a = MkEqDict { (==) :: a -> a -> Bool }
+
+-- same as: 
+-- data Eq a = MkEqDict (a -> a -> Bool)
+-- (==) :: Eq a -> (a -> a -> Bool)
+-- (==) (MkEqDict d) = d
 
 -- instance Eq Bool where ...
 dEqBool :: Eq Bool
@@ -58,14 +64,14 @@ data Num a = MkNumDict {
 -- square x = x * x
 
 square :: Num a -> a -> a
-square = undefined
+square d x = (*) d x x
 
 dNumInt :: Num Int
 dNumInt = MkNumDict plusInt mulInt negInt
 
 -- squares :: (Num a, Num b) => a -> b -> (a, b)
 squares :: Num a -> Num b -> a -> b -> (a,b)
-squares dx dy x y = undefined
+squares dx dy x y = (square dx x, square dy y)
 
 
 -- # Ord class
@@ -74,13 +80,8 @@ data Ord a = MkOrd { (<=) :: a -> a -> Bool,
                       eqD :: Eq a }
 
 
-{- From Prelude:
-compare :: Ord a => a -> a -> Ordering
-compare x y = if x == y then EQ
-                  else if x <= y
-                          then LT
-                          else GT
--}
-
 compare :: Ord a -> a -> a -> Ordering
-compare d x y = undefined
+compare d x y = if (==) (eqD d) x y then EQ
+                  else if (<=) d x y
+                         then LT
+                         else GT
