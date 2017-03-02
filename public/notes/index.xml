@@ -8,8 +8,18 @@
     <language>en-us</language>
     <managingEditor>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</managingEditor>
     <webMaster>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</webMaster>
-    <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Feb 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Section notes week 6 -- Haskell: polymorphic programming with typeclasses</title>
+      <link>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/section-week6/</link>
+      <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
+      <author>deian&#43;cse130@cs.ucsd.edu (Deian Stefan)</author>
+      <guid>https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/section-week6/</guid>
+      <description>&lt;script src=&#34;https://gist.github.com/themattchan/c9a97641fc045378e6bc4fc17df5b4f0.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
     
     <item>
       <title>Intro to Haskell</title>
