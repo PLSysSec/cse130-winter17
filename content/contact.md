@@ -26,7 +26,7 @@ matters, please post a private question or contact the course staff by email.
 - **Office hours:** Monday, 4pm-5pm in CSE B240A
 <hr/>
 - **Name:** Atyansh Jaiswal (AJ)
-- **Office hours:** Tuesday 4-5PM in CSE 3111
+- **Office hours:** Tuesday 12-1:30PM in CSE 3111
 <hr/>
 - **Name:** Abdulrahman M. Alkhelaifi (Abdul)
 - **Office hours:** Thursday 3:30 - 4:30 PM in CSE B260A
