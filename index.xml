@@ -1190,17 +1190,20 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Mar 06&lt;/th&gt;
     &lt;td&gt;
-      Subtyping and inheritance&lt;br/&gt;
+      Objects (cont)&lt;br/&gt;
+      [ &lt;a href=&#34;../slides/objects-cont.pdf&#34;&gt;slides&lt;/a&gt; ]
+      &lt;!-- [ readings: chapters 11, 12 ] --&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 08&lt;/th&gt;
+    &lt;td&gt;
+      Vtables, subtyping and inheritance&lt;br/&gt;
       [ readings: chapters 11, 12 ]
+      &lt;!-- Memory management and garbage collection --&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
     &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Cross-cutting concerns&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 08&lt;/th&gt;
-    &lt;td&gt;
-      Memory management and garbage collection
-    &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Mar 13&lt;/th&gt;
     &lt;td&gt;
