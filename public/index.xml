@@ -1198,7 +1198,7 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 08&lt;/th&gt;
     &lt;td&gt;
       Vtables, subtyping and inheritance&lt;br/&gt;
-      [ readings: chapters 11, 12 ]
+      [ readings: chapters 11, 12 | &lt;a href=&#34;../slides/cpp-and-subtyping.pdf&#34;&gt;slides&lt;/a&gt; ]
       &lt;!-- Memory management and garbage collection --&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
