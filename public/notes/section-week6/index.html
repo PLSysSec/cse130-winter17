@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Section notes week 6 -- Haskell: polymorphic programming with typeclasses  &middot; CSE 130</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="description" />
+
+<meta name="keywords" content="">
+
+
+<meta property="og:title" content="Section notes week 6 -- Haskell: polymorphic programming with typeclasses  &middot; CSE 130 ">
+<meta property="og:site_name" content="CSE 130"/>
+<meta property="og:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/section-week6/" />
+<meta property="og:locale" content="en-us">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="description"/>
+<meta property="og:article:published_time" content="2017-02-17T00:00:00Z" />
+<meta property="og:article:modified_time" content="2017-02-17T00:00:00Z" />
+
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@deiandelmars" />
+<meta name="twitter:creator" content="@deiandelmars" />
+<meta name="twitter:title" content="Section notes week 6 -- Haskell: polymorphic programming with typeclasses" />
+<meta name="twitter:description" content="description" />
+<meta name="twitter:url" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/section-week6/" />
+<meta name="twitter:domain" content="https://cseweb.ucsd.edu/~dstefan/cse130-winter17">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Section notes week 6 -- Haskell: polymorphic programming with typeclasses",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2017-02-17",
+    "description": "description",
+    "wordCount":  0 
+  }
+</script>
+
+
+
+<link rel="canonical" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes/section-week6/" />
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/touch-icon-144-precomposed.png">
+<link href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/favicon.png" rel="icon">
+<meta name="theme-color" content="#2053AB">
+<meta name="generator" content="Hugo 0.17" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:300%7CRaleway%7COpen+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/style.css">
+<link rel="stylesheet" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/css/highlight/default.css">
+
+  
+</head>
+<body>
+  <main id="main-wrapper" class="container main_wrapper has-sidebar">
+    <header id="main-header" class="container main_header">
+  <div class="container brand">
+  <div class="container title h1-like">
+  <a class="baselink" href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17">
+  CSE 130
+
+</a>
+
+</div>
+
+  
+<div class="container topline">
+  
+  Programming Languages: Principles and Paradigms
+
+
+</div>
+
+
+</div>
+
+  <nav class="container nav primary no-print">
+  
+
+
+  
+<a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/about">Organization &amp; Policies</a>
+
+<a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/syllabus" title="Course syllabus">Syllabus</a>
+
+<a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/contact">Contact</a>
+
+<a href="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/notes">Notes &amp; Readings</a>
+
+
+</nav>
+
+<div class="container nav secondary no-print">
+  
+<a id="contact-link-email" class="contact_link" href="mailto:deian&#43;cse130@cs.ucsd.edu">
+  <span class="fa fa-envelope-square"></span><span>email</span></a>
+
+
+
+<a id="contact-link-github" class="contact_link" href="https://github.com/plsyssec/cse130-winter17">
+  <span class="fa fa-github-square"></span><span>github</span></a>
+
+
+
+
+
+
+
+
+
+
+
+<a id="contact-link-twitter" class="contact_link" href="https://twitter.com/deiandelmars">
+  <span class="fa fa-twitter-square"></span><span>twitter</span></a>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+
+</header>
+
+
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>Section notes week 6 -- Haskell: polymorphic programming with typeclasses
+</h1>
+
+</header>
+
+  <div class="container content">
+  <script src="https://gist.github.com/themattchan/c9a97641fc045378e6bc4fc17df5b4f0.js"></script>
+
+</div>
+
+
+  
+</article>
+      <footer id="main-footer" class="container main_footer">
+  
+
+  <div class="container nav foot no-print">
+  
+
+  <a class="toplink" href="#">back to top</a>
+
+</div>
+
+  <div class="container credits">
+  
+<div class="container footline">
+  
+
+</div>
+
+
+  
+
+</div>
+
+</footer>
+
+    </main>
+    
+
+
+<script src="https://cseweb.ucsd.edu/~dstefan/cse130-winter17/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+    
+  </body>
+</html>
+
