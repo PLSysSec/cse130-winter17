@@ -1141,9 +1141,6 @@ seriously and will be enforced.&lt;/p&gt;
       [ &lt;a href=&#34;../code/intro.hs&#34;&gt;code&lt;/a&gt; | &lt;a href=&#34;../notes/haskell&#34;&gt;notes&lt;/a&gt;]
     &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;!-- &lt;tr&gt; --&gt;
-  &lt;!--   &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Side&amp;#45;effects and control structures&lt;/td&gt; --&gt;
-  &lt;!-- &lt;/tr&gt; --&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Feb 08&lt;/th&gt;
     &lt;td&gt;
       Haskell and introduction to types&lt;/br&gt;
@@ -1160,7 +1157,6 @@ seriously and will be enforced.&lt;/p&gt;
     &lt;td&gt;
       Type classes&lt;br/&gt;
       [ readings: &lt;a href=&#34;../book/ch07.pdf&#34;&gt;new chapter 7&lt;/a&gt; | &lt;a href=&#34;../slides/type-classes.pdf&#34;&gt;slides&lt;/a&gt; | &lt;a href=&#34;../code/type-classes-1.hs&#34;&gt;type-classes-1.hs&lt;/a&gt; | &lt;a href=&#34;../code/type-classes-2.hs&#34;&gt;type-classes-2.hs&lt;/a&gt; ]
-      &lt;!-- The IO monad and side&amp;#45;effects --&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;info&#34;&gt; &lt;th class=&#34;date&#34;&gt;Feb 20&lt;/th&gt;
@@ -1203,16 +1199,19 @@ seriously and will be enforced.&lt;/p&gt;
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Cross-cutting concerns&lt;/td&gt;
+    &lt;td colspan=&#34;3&#34; class=&#34;topic&#34;&gt;Control flow and side-effects&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Mar 13&lt;/th&gt;
     &lt;td&gt;
-      Modularity and module systems
+      Control flow, exceptions, and continuations
+      [ readings: sections 8.1-8.3, &lt;a href=&#34;http://matt.might.net/articles/by-example-continuation-passing-style/&#34;&gt;CPS in JavaScript&lt;/a&gt;
+      | &lt;a href=&#34;../slices/control.pdf&#34;&gt;slides&lt;/a&gt; ]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 15&lt;/th&gt;
     &lt;td&gt;
-      Memory models, concurrency, and STM
+      Continuations and monads
+      [ readings: &lt;a href=&#34;https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/mark.pdf&#34;&gt;Tackling the Awkward Squad&lt;/a&gt; ]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;info&#34;&gt;
