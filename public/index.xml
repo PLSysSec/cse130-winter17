@@ -1203,14 +1203,14 @@ seriously and will be enforced.&lt;/p&gt;
   &lt;/tr&gt;
   &lt;tr class=&#34;warning&#34;&gt; &lt;th class=&#34;date&#34;&gt;Mar 13&lt;/th&gt;
     &lt;td&gt;
-      Control flow, exceptions, and continuations
+      Control flow, exceptions, and continuations&lt;br/&gt;
       [ readings: sections 8.1-8.3, &lt;a href=&#34;http://matt.might.net/articles/by-example-continuation-passing-style/&#34;&gt;CPS in JavaScript&lt;/a&gt;
-      | &lt;a href=&#34;../slices/control.pdf&#34;&gt;slides&lt;/a&gt; ]
+      | &lt;a href=&#34;../slides/control.pdf&#34;&gt;slides&lt;/a&gt; ]
     &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt; &lt;th class=&#34;date&#34;&gt;Mar 15&lt;/th&gt;
     &lt;td&gt;
-      Continuations and monads
+      Continuations and monads&lt;br/&gt;
       [ readings: &lt;a href=&#34;https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/mark.pdf&#34;&gt;Tackling the Awkward Squad&lt;/a&gt; ]
     &lt;/td&gt;
   &lt;/tr&gt;
